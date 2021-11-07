@@ -7,44 +7,376 @@
       body{
         margin:0;
         padding:0;
-        width:100%;
-        height:100vh;
-        min-width:1920px;
-      }
-      .frame2{
         box-sizing:border-box;
+        overflow-y:hidden;
+      }
+      .container{
+        position:relative;
         width:100%;
+        display:flex;
+      }
+      section{
+        min-width:100%;
+        height:auto;
         height:100vh;
-        background-image:url("Frame_2/Frame_2_1.png");
+      }
+      .page{
+        background-position: center center;
         background-repeat: no-repeat;
-        margin:0;
+        background-size: cover;
+        box-sizing:border-box;
+        max-width:100%;
+        height:auto;
+        height:100vh;
+      }
+      .page1{
+        background-image:url("Frame_2/Frame_2_1.png");
         color:white;
-        padding:130px;
         pointer-events:none;
       }
-      .frame2:hover{
+      .page1:hover{
         background-image:url("Frame_2/Frame_2_2.png");
       }
-      .txt-frame2{
+      .page1-txt{
+        position:relative;
         text-align:center;
         margin:0;
         padding:0;
+        top:10%;
+        font-size:2.5vw;
+        box-sizing:border-box;
       }
-      .click-frame2{
+      .page1-click{
         position:relative;
-        top:425px;
-        left:465px;
+        top:51.5%;
+        left:31.25%;
         pointer-events:auto;
+        max-width:10vw;
+        height:auto;
+        box-sizing:border-box;
+      }
+      .page2{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page2{
+        background-image:url("Frame_3/HOMELESS_1.png");
+        width:65vw;
+        height:65vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+      }
+      .sm-page2-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page2-img{
+        max-width:30vw;
+        height:auto;
+      }
+      .page3{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page3{
+        width:75vw;
+        height:75vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:repeat(3,1fr);
+        
+      }
+      .sm-page3-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page3-img1{
+        right:100%;
+      }
+      .sm-page3-img2{
+        grid-column: 2/4;
+      }
+      .sm-page3-img3{
+        grid-row:2/4;
+      }
+      .sm-page3-img4{
+        grid-column: 3/4;
+        grid-row:3/4;
+      }
+      .sm-page3-img5{
+        grid-column: 2/3;
+        grid-row:3/4;
+      }
+      .page3-img1{
+        position:relative;
+        left:25%;
+        max-width:30vw;
+        height:auto;
+      }
+      .page3-img2{
+        max-width:50vw;
+        height:auto;
+      }
+      .page3-img3{
+        position:relative;
+        left:20%;
+        max-width:30vw;
+        height:auto;
+      }
+      .page3-img4{
+        position:relative;
+        bottom:25%;
+        max-width:30vw;
+        height:auto;
+      }
+      .page3-img5{
+        position:relative;
+        top:40%;
+        max-width:10vw;
+        height:auto;
+      }
+      .page4{
+        background-color:black;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page4{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+      }
+      .sm-page4-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page4-img1{
+        grid-column:2/4;
+      }
+      .page4-img1{
+        max-width:30vw;
+        height:auto;
+      }
+      .page4-img2{
+        position:relative;
+        right:20%;
+        top:45%;
+        max-width:20vw;
+        height:auto;
+      }
+      .page5{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page5{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+      }
+      .sm-page5-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page5-img1{
+        position:relative;
+        left:20%;
+        max-width:20vw;
+        height:auto;
+      }
+      .page5-img2{
+        position:relative;
+        bottom:10%;
+        right:20%;
+        max-width:40vw;
+        height:auto;
       }
     </style>
   </head>
   <body>
-    <div class="content">
-      <div id="frame2" class="frame2">
-        <h1 class="txt-frame2">ทุกวันนี้เราเห็นอะไรบ้าง</h1>
-        <img class="click-frame2" src="Frame_2/คลิก.png">
-      </div>
+    <div id="container" class="container">
+      <section>
+        <div id="page1" class="page page1">
+          <h1 class="page1-txt">ทุกวันนี้เราเห็นอะไรบ้าง</h1>
+          <img id="page1_click" class="page1-click" src="Frame_2/คลิก.png">
+        </div>
+      </section>
+      <section>
+        <div id="page2" class="page page2">
+          <div id="sm-page2" class="sm-page2">
+            <div id="sm-page2-img1" class="sm-page2-img sm-page2-img1"><img class="page2-img page2-img1"src="Frame_3/Text_1.png"></div>
+            <div id="sm-page2-img2" class="sm-page2-img sm-page2-img2"><img class="page2-img page2-img2"src="Frame_3/Text_2.png"></div>
+            <div id="sm-page2-img3" class="sm-page2-img sm-page2-img3"><img class="page2-img page2-img3"src="Frame_3/Text_3.png"></div>
+            <div id="sm-page2-img4" class="sm-page2-img sm-page2-img4"><img class="page2-img page2-img4"src="Frame_3/Text_4.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page3" class="page page3">
+          <div id="sm-page3" class="sm-page3">
+            <div id="sm-page3-img1" class="sm-page3-img sm-page3-img1"><img class="page3-img page3-img1"src="Frame_4/Text_5.png"></div>
+            <div id="sm-page3-img2" class="sm-page3-img sm-page3-img2"><img class="page3-img page3-img2"src="Frame_4/HOMELESS_2.png"></div>
+            <div id="sm-page3-img3" class="sm-page3-img sm-page3-img3"><img class="page3-img page3-img3"src="Frame_4/Newpaper.png"></div>
+            <div id="sm-page3-img4" class="sm-page3-img sm-page3-img4"><img class="page3-img page3-img4"src="Frame_4/Text_6.png"></div>
+            <div id="sm-page3-img5" class="sm-page3-img sm-page3-img5"><img class="page3-img page3-img5"src="Frame_4/อ่านต่อ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page4" class="page page4">
+          <div id="sm-page4" class="sm-page4">
+            <div id="sm-page4-img1" class="sm-page4-img sm-page4-img1"><img class="page4-img page4-img1"src="Frame_5/Newpaper_2.png"></div>
+            <div id="sm-page4-img2" class="sm-page4-img sm-page4-img2"><img class="page4-img page4-img2"src="Frame_5/พลิกหน้าถัดไป.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page5" class="page page5">
+          <div id="sm-page5" class="sm-page5">
+            <div id="sm-page5-img1" class="sm-page5-img sm-page5-img1"><img class="page5-img page5-img1"src="Frame_6/HOMELESS_3.png"></div>
+            <div id="sm-page5-img2" class="sm-page5-img sm-page5-img2"><img class="page5-img page5-img2"src="Frame_6/Text_7.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page6" class="page page6">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page7_1" class="page page7_1">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page7_2" class="page page7_2">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page7_3" class="page page7_3">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page8" class="page page8">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page9" class="page page9">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page10" class="page page10">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page11" class="page page11">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page12" class="page page12">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page13" class="page page13">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page14" class="page page14">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page15" class="page page15">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page16_1" class="page page16_1">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page16_2" class="page page16_2">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page16_3" class="page page16_3">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page17" class="page page17">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page18" class="page page18">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page19" class="page page19">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page20" class="page page20">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page21" class="page page21">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page22" class="page page22">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page23" class="page page23">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page24" class="page page24">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page25" class="page page25">
+          
+        </div>
+      </section>
     </div>
   </body>
 </html>
-
