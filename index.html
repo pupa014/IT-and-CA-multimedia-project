@@ -1,68 +1,1380 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <title>Jabont
+    <title>คนไร้บ้าน
     </title>
     <style>
       body{
-        background:#eee;
-        font-family:sans-serif;
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        overflow-y:hidden;
+      }
+      .container{
+        position:relative;
+        width:100%;
         display:flex;
-        justify-content:center;
-        align-items:center;
+      }
+      section{
+        min-width:100%;
+        height:auto;
+        height:100vh;
+      }
+      .page{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing:border-box;
+        max-width:100%;
+        height:auto;
+        height:100vh;
+      }
+      .page1{
+        background-image:url("Frame_2/Frame_2_1.png");
+        color:white;
+        pointer-events:none;
+      }
+      .page1:hover{
+        background-image:url("Frame_2/Frame_2_2.png");
+      }
+      .page1-txt{
+        position:relative;
         text-align:center;
+        margin:0;
+        padding:0;
+        top:10%;
+        font-size:2.5vw;
+        box-sizing:border-box;
       }
-      a{
-        color:deeppink;
-        text-decoration: none;
+      .page1-click{
+        position:relative;
+        top:51.5%;
+        left:31.25%;
+        pointer-events:auto;
+        max-width:10vw;
+        height:auto;
+        box-sizing:border-box;
       }
-      .social{
-        font-size:2em;
+      .page2{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page2{
+        background-image:url("Frame_3/HOMELESS_1.png");
+        width:65vw;
+        height:65vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+      }
+      .sm-page2-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page2-img{
+        max-width:30vw;
+        height:auto;
+      }
+      .page3{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page3{
+        width:75vw;
+        height:75vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:repeat(3,1fr);
+        
+      }
+      .sm-page3-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page3-img1{
+        right:100%;
+      }
+      .sm-page3-img2{
+        grid-column: 2/4;
+      }
+      .sm-page3-img3{
+        grid-row:2/4;
+      }
+      .sm-page3-img4{
+        grid-column: 3/4;
+        grid-row:3/4;
+      }
+      .sm-page3-img5{
+        grid-column: 2/3;
+        grid-row:3/4;
+      }
+      .page3-img1{
+        position:relative;
+        left:25%;
+        max-width:30vw;
+        height:auto;
+      }
+      .page3-img2{
+        max-width:50vw;
+        height:auto;
+      }
+      .page3-img3{
+        position:relative;
+        left:20%;
+        max-width:30vw;
+        height:auto;
+      }
+      .page3-img4{
+        position:relative;
+        bottom:25%;
+        max-width:30vw;
+        height:auto;
+      }
+      .page3-img5{
+        position:relative;
+        top:40%;
+        max-width:10vw;
+        height:auto;
+      }
+      .page4{
+        background-color:black;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page4{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+      }
+      .sm-page4-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page4-img1{
+        grid-column:2/4;
+      }
+      .page4-img1{
+        max-width:30vw;
+        height:auto;
+      }
+      .page4-img2{
+        position:relative;
+        right:20%;
+        top:45%;
+        max-width:20vw;
+        height:auto;
+      }
+      .page5{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page5{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+      }
+      .sm-page5-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page5-img1{
+        position:relative;
+        left:20%;
+        max-width:20vw;
+        height:auto;
+      }
+      .page5-img2{
+        position:relative;
+        bottom:10%;
+        right:20%;
+        max-width:40vw;
+        height:auto;
+      }
+      .page6{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page6{
+        width:90vw;
+        height:90vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+      }
+      .sm-page6-img1{
+        grid-column:2/6;
+        background-image:url("Frame_7/Map.png");
+        background-position: center;
+        background-size:90%;
+        background-repeat:no-repeat;
+      }
+      .sm-page6-img1-1{
+        position:relative;
+        top:45%;
+        left:25%;
+      }
+      .sm-page6-img2-2{
+        position:relative;
+        top:8%;
+        left:52.5%;
+      }
+      .sm-page6-img3-3{
+        position:relative;
+        top:15%;
+        left:70%;
+      }
+      .page6-img1-1{
+        max-width:10vw;
+        height:auto;
+      }
+      .page6-img2-2{
+        max-width:10vw;
+        height:auto;
+      }
+      .page6-img3-3{
+        max-width:10vw;
+        height:auto;
+      }
+      .sm-page6-img2{
+        position:relative;
+        top:85%;
+        right:70%;
+      }
+      .page6-img2{
+        max-width:12vw;
+        height:auto;
+      }
+      .page7_1, .page7_2, .page7_3{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page7_1, .sm-page7_2, .sm-page7_3{
+        width:90vw;
+        height:90vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+      }
+      .sm-page7_1-img1{
+        grid-column:2/6;
+        background-image:url("Frame_8/ชาติ.png");
+        background-position: center;
+        background-size:90%;
+        background-repeat:no-repeat;
+      }
+      .sm-page7_1-img2, .sm-page7_2-img2, .sm-page7_3-img2{
+        position:relative;
+        top:87.5%;
+        right:65%;
+      }
+      .page7_1-img2, .page7_2-img2, .page7_3-img2{
+        max-width:10vw;
+        height:auto;
+      }
+      .sm-page7_2-img1{
+        grid-column:2/6;
+        background-image:url("Frame_8/น้าเขียว.png");
+        background-position: center;
+        background-size:90%;
+        background-repeat:no-repeat;
+      }
+      .sm-page7_3-img1{
+        grid-column:2/6;
+        background-image:url("Frame_8/พี่เชอร์รี่.png");
+        background-position: center;
+        background-size:90%;
+        background-repeat:no-repeat;
+      }
+      .page8{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page8{
+        width:75vw;
+        height:75vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:repeat(6,1fr);
+        
+      }
+      .sm-page8-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page8-img1{
+        grid-row:1/3;
+        grid-column:1/4;
+      }
+      .sm-page8-img2{
+        grid-row:4/6;
+        grid-column:1/3;
+      }
+      .sm-page8-img3{
+        grid-row:3/7;
+        grid-column:3/4;
+      }
+      .page8-img1-1{
+        max-width:60vw;
+        height:auto;
+      }
+      .page8-img2-1{
+        max-width:40vw;
+        height:auto;
+        position:relative;
+        left:15%;
+        top:20%;
+      }
+      .page8-img3-1{
+        max-width:16vw;
+        height:auto;
+        position:relative;
+        left:18%;
+        top:15%;
+      }
+      .page8-img4-1{
+        max-width:16vw;
+        height:auto;
+        position:relative;
+        
+      }
+      .sm-page8-img4{
+        position:relative;
+        bottom:40%;
+        right:25%;
+      }
+      .page9{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page9{
+        width:75vw;
+        height:75vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+        
+      }
+      .sm-page9-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page9-img1-1{
+        max-width:50vw;
+        height:auto;
+      }
+      .page9-img1-1{
+        max-width:50vw;
+        height:auto;
+      }
+      .sm-page9-img2{
+        position:relative;
+        bottom:40%;
+        right:50%;
+      }
+      .page9-img2-1{
+        max-width:15vw;
+        height:auto; 
+      }
+      .page9-img3-1{
+        max-width:30vw;
+        height:auto;
+      }
+      .sm-page9-img3{
+        position:relative;
+        top:7.5%;
+        right:35%;
+      }
+      .sm-page9-img4{
+        position:relative;
+        bottom:40%;
+        right:50%;
+      }
+      .page9-img4-1{
+        max-width:20vw;
+        height:auto; 
+      }
+      .sm-page9-img5{
+        position:relative;
+        bottom:25%;
+        right:2.5%;
+        grid-row:2/3;
+        grid-column:1/2;
+      }
+      .page9-img5-1{
+        max-width:30vw;
+        height:auto; 
+      }
+      .sm-page9-img6{
+        position:relative;
+        bottom:32.5%;
+        right:70%;
+        grid-row:2/3;
+        grid-column:2/3;
+      }
+      .page9-img6-1{
+        max-width:40vw;
+        height:auto; 
+      }
+      .page10{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page10{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows:repeat(5,1fr);
+        
+      }
+      .sm-page10-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page10-img1{
+        grid-row:1/3;
+        grid-column:1/3;
+      }
+      .sm-page10-img2{
+        grid-row:3/6;
+        grid-column:1/2;
+      }
+      .sm-page10-img3{
+        grid-row:3/6;
+        grid-column:2/3;
+      }
+      .sm-page10-img4{
+        grid-row:1/6;
+        grid-column:3/4;
+      }
+      .sm-page10-img5{
+        grid-row:1/6;
+        grid-column:4/5;
+      }
+      .page10-img1-1{
+        max-width:25vw;
+        height:auto; 
+        position:relative;
+        left:30%; 
+      }
+      .page10-img2-1{
+        max-width:15vw;
+        height:auto; 
+        position:relative;
+        left:22.5%; 
+      }
+      .page10-img3-1{
+        max-width:15vw;
+        height:auto; 
+        position:relative;
+        left:12.5%; 
+      }
+      .page10-img4-1{
+        max-width:20vw;
+        height:auto; 
+        position:relative;
+        left:12.5%; 
+      }
+      .page10-img5-1{
+        max-width:15vw;
+        height:auto; 
+        position:relative;
+        right:27.5%; 
+      }
+      .page10-img6-1{
+        max-width:25vw;
+        height:auto;
+        position:relative;
+        right:10%; 
+      }
+      .sm-page10-img6{
+        position:relative;
+        bottom:30%; 
+      }
+      .sm-page10-img5{
+        position:relative;
+        bottom:15%; 
+      }
+      .page11{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page11{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-rows:repeat(2,1fr);
+        
+      }
+      .sm-page11-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page11-img1-1{
+        max-width:40vw;
+        height:auto;
+      }
+      .page11-img2-1{
+        max-width:45vw;
+        height:auto;
+        position:relative;
+        left:16%;
+      }
+      .page11-img3-1{
+        max-width:25vw;
+        height:auto;
+        position:relative;
+        right:40%;
+      }
+      .sm-page11-img3{
+        position:relative;
+        bottom:40%;
+      }
+      .page12{
+        background-image: url("Frame_13/HOMELESS_16.png");
+      }
+      .page13{
+        background-image: url("Frame_14/HOMELESS_17.png");
+      }
+      .page14{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page14{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        
+      }
+      .sm-page14-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page14-img1-1{
+        max-width:17.5vw;
+        height:auto;
+      }
+      .page14-img2-1{
+        max-width:17.5vw;
+        height:auto;
+      }
+      .page14-img3-1{
+        max-width:17.5vw;
+        height:auto;
+      }
+      .page14-img4-1{
+        max-width:15vw;
+        height:auto;
+      }
+      .sm-page14-img1{
+        position:relative;
+        left:20%;
+      }
+      .sm-page14-img2{
+        position:relative;
+        left:20%;
+      }
+      .sm-page14-img3{
+        position:relative;
+        left:20%;
+      }
+      .sm-page14-img4{
+        position:relative;
+        right:80%;
+        bottom:30%;
+      }
+      .page15{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page15{
+        width:90vw;
+        height:90vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        grid-template-rows:repeat(10,1fr);
+      }
+      .sm-page15-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page15-img1{
+        grid-column:2/6;
+      }
+      .sm-page15-img2{
+        grid-column:2/6;
+        grid-row:2/10;
+        background-image:url("Frame_16/HOMELESS_21.png");
+        background-position: center;
+        background-size:100%;
+        background-repeat:no-repeat;
+      }
+      .sm-page15-img3{
+        grid-column:2/6;
+      }
+      .sm-page15-img4{
+        grid-column:6/7;
+        grid-row:10/11;
+      }
+      .page15-img1-1{
+        max-width:40vw;
+        height:auto;
+      }
+      .page15-img3-1{
+        width:25vw;
+        max-width:100vw;
+        height:auto;
+      }
+      .page15-img4-1{
+        max-width:12vw;
+        height:auto;
+        position:relative;
+        right:75%;
+      }
+      .sm-page15-img5{
+        position:relative;
+        right:25%;
+        top:20%;
+      }
+      .sm-page15-img6{
+        position:relative;
+        left:15%;
+        bottom:40%;
+      }
+      .sm-page15-img7{
+        position:relative;
+        left:20%;
+        top:20%;
+      }
+      .page15-img5-1{
+        max-width:10vw;
+        height:auto;
+      }
+      .page15-img6-1{
+        max-width:10vw;
+        height:auto;
+      }
+      .page15-img7-1{
+        max-width:10vw;
+        height:auto;
+      }
+      .page16_1, .page16_2, .page16_3{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page16-1{
+        width:90vw;
+        height:90vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+      }
+      .sm-page16-1-img1{
+        grid-column:2/6;
+      }
+      .page16-1-img1-1{
+        max-width:50vw;
+        height:auto;
+      }
+      .page16-2-img1-1{
+        max-width:55vw;
+        height:auto;
+      }
+      .page16-1-img1-2{
+        max-width:10vw;
+        height:auto;
+        position:relative;
+        top:36%;
+        right:70%;
+      }
+      .sm-page16-1-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page17, .page18, .page19, .page20, .page21, .page22, .page23, .page24, .page25{
+        background-color:black;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+      }
+      .sm-page18{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(5,1fr);
+        grid-template-rows:repeat(5,1fr);
+      }
+      .sm-page18-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page18-img1{
+        grid-row:1/3;
+        grid-column:4/6;
+        background-image:url("Frame_18-26/Boarder_2.png");
+        background-position: center;
+        background-size:80%;
+        background-repeat:no-repeat;
+      }
+      .sm-page18-img2{
+        grid-row:4/6;
+        grid-column:1/3;
+        background-image:url("Frame_18-26/Boarder_2.png");
+        background-position: center;
+        background-size:80%;
+        background-repeat:no-repeat;
+      }
+      .sm-page18-txt{
+        grid-row:3/4;
+        grid-column:3/4;
+        text-align: center;
+        font-size:1.5vw;
+      }
+      .page18-img1-1{
+        max-width:60vw;
+        height:auto;
+      }
+      .page18-img2-1{
+        max-width:40vw;
+        height:auto;
+      }
+      .sm-page19{
+        width:70vw;
+        height:70vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+      }
+      .sm-page19-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page19-img1{
+        background-image:url("Frame_18-26/Boarder_5.png");
+        background-position: center;
+        background-size:70%;
+        background-repeat:no-repeat;
+      }
+      .sm-page19-txt{
+        text-align: center;
+        font-size:1.5vw;
+      }
+      .page19-img1-1{
+        max-width:35vw;
+        height:auto;
+      }
+      .sm-page21{
+        width:70vw;
+        height:70vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(5,1fr);
+      }
+      .sm-page21-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page21-img1{
+        background-image:url("Frame_18-26/Boarder_4.png");
+        background-position: center;
+        background-size:80%;
+        background-repeat:no-repeat;
+        grid-column:3/6;
+      }
+      .sm-page21-txt{
+        text-align: center;
+        font-size:1.5vw;
+        grid-column:1/3;
+      }
+      .page21-img1-1{
+        max-width:50vw;
+        height:auto;
+      }
+      .sm-page22{
+        width:70vw;
+        height:70vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-rows:repeat(5,1fr);
+      }
+      .sm-page22-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page22-img1{
+        background-position: center;
+        background-size:80%;
+        background-repeat:no-repeat;
+        grid-row:3/6;
+      }
+      .sm-page22-txt{
+        text-align: center;
+        font-size:1.5vw;
+        grid-row:1/3;
+      }
+      .page22-img1-1{
+        max-width:50vw;
+        height:auto;
+      }
+      .sm-page23-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page23-img1{
+        grid-row:1/3;
+        grid-column:1/3;
+        
+        background-position: center;
+        background-size:80%;
+        background-repeat:no-repeat;
+      }
+      .sm-page23-img2{
+        grid-row:3/6;
+        grid-column:4/6;
+        
+        background-position: center;
+        background-size:80%;
+        background-repeat:no-repeat;
+      }
+      .sm-page23-txt{
+        grid-row:3/4;
+        grid-column:3/4;
+        text-align: center;
+        font-size:1.5vw;
+      }
+      .page23-img1-1{
+        max-width:60vw;
+        height:auto;
+      }
+      .page23-img2-1{
+        max-width:30vw;
+        height:auto;
+      }
+      .page26{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page26{
+        width:75vw;
+        height:75vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(5,1fr);
+        
+      }
+      .sm-page26-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-sizing:border-box;
+      }
+      .sm-page26-img1{
+        grid-row:1/4;
+        grid-column:1/3;
+      }
+      .sm-page26-img2{
+        grid-row:4/6;
+      }
+      .sm-page26-img3{
+        grid-row:4/6;
+      }
+      .sm-page26-img4{
+        position:relative;
+        right:55%;
+        bottom:30%;
+      }
+      .sm-page26-img5{
+        position:relative;
+        right:30%;
+        bottom:50%;
+      }
+      .sm-page26-img6{
+        position:relative;
+        right:30%;
+        bottom:50%;
+      }
+      .page26-img1-1{
+        max-width:40vw;
+        height:auto;
+        position:relative;
+        left:11%;
+      }
+      .page26-img2-1{
+        max-width:20vw;
+        height:auto;
+        position:relative;
+        left:40%;
+      }
+      .page26-img3-1{
+        max-width:20vw;
+        height:auto;
+        position:relative;
+        left:0%;
+      }
+      .page26-img4-1{
+        max-width:15vw;
+        height:auto;
+      }
+      .page26-img5-1{
+        max-width:15vw;
+        height:auto;
+      }
+      .page26-img6-1{
+        max-width:15vw;
+        height:auto;
+      }
+      .page27{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page27-img1-1{
+        max-width:80vw;
+        height:auto;
+      }
+      .page28{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page28{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+      }
+      .sm-page28-txt{
+        text-align: left;
+        font-size:1.5vw;
+      }
+      .sm-page28-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page28-img1-1{
+        max-width:40vw;
+        height:auto;
+      }
+      .page29{
+        background-image:url("Frame_3/Bg.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page29{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        grid-template-rows:repeat(2,1fr);
+      }
+      .sm-page29-img{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page29-img1{
+        grid-row:1/2;
+        grid-column:2/6;
+        position:relative;
+        right:6.5%;
+      }
+      .sm-page29-txt{
+        grid-row:2/3;
+        grid-column:2/6;
+        text-align:center;
+        font-size:1.5vw;
+        font-weight: bold;
+      }
+      .sm-page29-img2{
+        grid-column:6/7;
+        grid-row:2/3;
+        position:relative;
+        top:40%;
+      }
+      .page29-img1-1{
+        max-width:60vw;
+        height:auto;
+      }
+      .page29-img2-1{
+        max-width:10vw;
+        height:auto;
       }
     </style>
   </head>
   <body>
-    <div class="main">
-      <h1>
-         Hello World 😎
-      </h1>
-      <p>
-        Welcome to my site
-      </p>
-      <p class="social">
-       
-        <a href="_____" class="">
-          <i class="fab fa-instagram">
-          </i>
-        </a>
-        
-        <a href="_____" class="">
-          <i class="fab fa-twitter">
-          </i>
-        </a>
-        
-        <a href="_____" class="">
-          <i class="fab fa-facebook">
-          </i>
-        </a>
-        
-        <a href="mailto:jabont@hotmail.com" class="">
-          <i class="fab fa-email">
-          </i>
-        </a>
-        
-         <a href="_____" class="">
-          <i class="fab fa-linkedin">
-          </i>
-        </a>
-        
-         <a href="_____" class="">
-          <i class="fab fa-line">
-          </i>
-        </a>
-      </p>
-      😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎
+    <div id="container" class="container">
+      <section>
+        <div id="page1" class="page page1">
+          <h1 class="page1-txt">ทุกวันนี้เราเห็นอะไรบ้าง</h1>
+          <img id="page1_click" class="page1-click" src="Frame_2/คลิก.png">
+        </div>
+      </section>
+      <section>
+        <div id="page2" class="page page2">
+          <div id="sm-page2" class="sm-page2">
+            <div id="sm-page2-img1" class="sm-page2-img sm-page2-img1"><img class="page2-img page2-img1"src="Frame_3/Text_1.png"></div>
+            <div id="sm-page2-img2" class="sm-page2-img sm-page2-img2"><img class="page2-img page2-img2"src="Frame_3/Text_2.png"></div>
+            <div id="sm-page2-img3" class="sm-page2-img sm-page2-img3"><img class="page2-img page2-img3"src="Frame_3/Text_3.png"></div>
+            <div id="sm-page2-img4" class="sm-page2-img sm-page2-img4"><img class="page2-img page2-img4"src="Frame_3/Text_4.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page3" class="page page3">
+          <div id="sm-page3" class="sm-page3">
+            <div id="sm-page3-img1" class="sm-page3-img sm-page3-img1"><img class="page3-img page3-img1"src="Frame_4/Text_5.png"></div>
+            <div id="sm-page3-img2" class="sm-page3-img sm-page3-img2"><img class="page3-img page3-img2"src="Frame_4/HOMELESS_2.png"></div>
+            <div id="sm-page3-img3" class="sm-page3-img sm-page3-img3"><img class="page3-img page3-img3"src="Frame_4/Newpaper.png"></div>
+            <div id="sm-page3-img4" class="sm-page3-img sm-page3-img4"><img class="page3-img page3-img4"src="Frame_4/Text_6.png"></div>
+            <div id="sm-page3-img5" class="sm-page3-img sm-page3-img5"><img class="page3-img page3-img5"src="Frame_4/อ่านต่อ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page4" class="page page4">
+          <div id="sm-page4" class="sm-page4">
+            <div id="sm-page4-img1" class="sm-page4-img sm-page4-img1"><img class="page4-img page4-img1"src="Frame_5/Newpaper_2.png"></div>
+            <div id="sm-page4-img2" class="sm-page4-img sm-page4-img2"><img class="page4-img page4-img2"src="Frame_5/พลิกหน้าถัดไป.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page5" class="page page5">
+          <div id="sm-page5" class="sm-page5">
+            <div id="sm-page5-img1" class="sm-page5-img sm-page5-img1"><img class="page5-img page5-img1"src="Frame_6/HOMELESS_3.png"></div>
+            <div id="sm-page5-img2" class="sm-page5-img sm-page5-img2"><img class="page5-img page5-img2"src="Frame_6/Text_7.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page6" class="page page6">
+          <div id="sm-page6" class="sm-page6">
+            <div id="sm-page6-img1" class="sm-page6-img sm-page6-img1">
+              <div id="sm-page6-img1-1" class="sm-page6-img sm-page6-img1-1"><img class="page6-img page6-img1-1"src="Frame_7/Name_1.png"></div>
+              <div id="sm-page6-img2-2" class="sm-page6-img sm-page6-img2-2"><img class="page6-img page6-img2-2"src="Frame_7/Name_2.png"></div>
+              <div id="sm-page6-img3-3" class="sm-page6-img sm-page6-img3-3"><img class="page6-img page6-img3-3"src="Frame_7/Name_3.png"></div>
+            </div>
+            <div id="sm-page6-img2" class="sm-page6-img sm-page6-img2"><img class="page6-img page6-img2"src="Frame_7/ไปต่อ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page7_1" class="page page7_1">
+          <div id="sm-page7_1" class="sm-page7_1">
+            <div id="sm-page7_1-img1" class="sm-page7_1-img sm-page7_1-img1"></div>
+            <div id="sm-page7_1-img2" class="sm-page7_1-img sm-page7_1-img2"><img class="page7_1-img page7_1-img2"src="Frame_8/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page7_2" class="page page7_2">
+          <div id="sm-page7_2" class="sm-page7_2">
+            <div id="sm-page7_2-img1" class="sm-page7_2-img sm-page7_2-img1"></div>
+            <div id="sm-page7_2-img2" class="sm-page7_2-img sm-page7_2-img2"><img class="page7_2-img page7_2-img2"src="Frame_8/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page7_3" class="page page7_3">
+          <div id="sm-page7_3" class="sm-page7_3">
+            <div id="sm-page7_3-img1" class="sm-page7_3-img sm-page7_3-img1"></div>
+            <div id="sm-page7_3-img2" class="sm-page7_3-img sm-page7_3-img2"><img class="page7_3-img page7_3-img2"src="Frame_8/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page8" class="page page8">
+          <div id="sm-page8" class="sm-page8">
+            <div id="sm-page8-img1" class="sm-page8-img sm-page8-img1"><img class="page8-img page8-img1-1"src="Frame_9/HOMELESS_4.png"></div>
+            <div id="sm-page8-img2" class="sm-page8-img sm-page8-img2"><img class="page8-img page8-img2-1"src="Frame_9/HOMELESS_5.png"></div>
+            <div id="sm-page8-img3" class="sm-page8-img sm-page8-img3"><img class="page8-img page8-img3-1"src="Frame_9/HOMELESS_6.png">
+              <div id="sm-page8-img4" class="sm-page8-img sm-page8-img4"><img class="page8-img page8-img4-1"src="Frame_9/Text_8.png"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page9" class="page page9">
+          <div id="sm-page9" class="sm-page9">
+            <div id="sm-page9-img1" class="sm-page9-img sm-page9-img1"><img class="page9-img page9-img1-1"src="Frame_10/HOMELESS_7.png">
+              <div id="sm-page9-img2" class="sm-page9-img sm-page9-img2"><img class="page9-img page9-img2-1"src="Frame_10/Text_9.png"></div>
+            </div>
+            <div id="sm-page9-img3" class="sm-page9-img sm-page9-img3"><img class="page9-img page9-img3-1"src="Frame_10/HOMELESS_8.png">
+              <div id="sm-page9-img4" class="sm-page9-img sm-page9-img4"><img class="page9-img page9-img4-1"src="Frame_10/Text_10.png"></div>
+            </div>
+            <div id="sm-page9-img5" class="sm-page9-img sm-page9-img5"><img class="page9-img page9-img5-1"src="Frame_10/HOMELESS_9.png"></div>
+            <div id="sm-page9-img6" class="sm-page9-img sm-page9-img6"><img class="page9-img page9-img6-1"src="Frame_10/Text_11.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page10" class="page page10">
+          <div id="sm-page10" class="sm-page10">
+            <div id="sm-page10-img1" class="sm-page10-img sm-page10-img1"><img class="page10-img page10-img1-1"src="Frame_11/HOMELESS_10.png">
+              <div id="sm-page10-img6" class="sm-page10-img sm-page10-img6"><img class="page10-img page10-img6-1"src="Frame_11/Text_12.png"></div>
+            </div>
+            <div id="sm-page10-img2" class="sm-page10-img sm-page10-img2"><img class="page10-img page10-img2-1"src="Frame_11/HOMELESS_11.png"></div>
+            <div id="sm-page10-img3" class="sm-page10-img sm-page10-img3"><img class="page10-img page10-img3-1"src="Frame_11/HOMELESS_12.png"></div>
+            <div id="sm-page10-img4" class="sm-page10-img sm-page10-img4"><img class="page10-img page10-img4-1"src="Frame_11/HOMELESS_13.png"></div>
+            <div id="sm-page10-img5" class="sm-page10-img sm-page10-img5"><img class="page10-img page10-img5-1"src="Frame_11/Text_13.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page11" class="page page11">
+          <div id="sm-page11" class="sm-page11">
+            <div id="sm-page11-img1" class="sm-page11-img sm-page11-img1"><img class="page11-img page11-img1-1"src="Frame_12/HOMELESS_14.png"></div>
+            <div id="sm-page11-img2" class="sm-page11-img sm-page11-img2"><img class="page11-img page11-img2-1"src="Frame_12/HOMELESS_15.png">
+              <div id="sm-page11-img3" class="sm-page11-img sm-page11-img3"><img class="page11-img page11-img3-1"src="Frame_12/Text_14.png"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page12" class="page page12">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page13" class="page page13">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page14" class="page page14">
+          <div id="sm-page14" class="sm-page14">
+            <div id="sm-page14-img1" class="sm-page14-img sm-page14-img1"><img class="page14-img page14-img1-1"src="Frame_15/HOMELESS_18.png"></div>
+            <div id="sm-page14-img2" class="sm-page14-img sm-page14-img2"><img class="page14-img page14-img2-1"src="Frame_15/HOMELESS_19.png"></div>
+            <div id="sm-page14-img3" class="sm-page14-img sm-page14-img3"><img class="page14-img page14-img3-1"src="Frame_15/HOMELESS_20.png">
+              <div id="sm-page14-img4" class="sm-page14-img sm-page14-img4"><img class="page14-img page14-img4-1"src="Frame_15/Text_15.png"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page15" class="page page15">
+          <div id="sm-page15" class="sm-page15">
+            <div id="sm-page15-img1" class="sm-page15-img sm-page15-img1"><img class="page15-img page15-img1-1"src="Frame_16/ดินเนอร์.png"></div>
+            <div id="sm-page15-img2" class="sm-page15-img sm-page15-img2">
+              <div id="sm-page15-img5" class="sm-page15-img sm-page15-img5"><img class="page15-img page15-img5-1"src="Frame_16/คลิก.png"></div>
+              <div id="sm-page15-img6" class="sm-page15-img sm-page15-img6"><img class="page15-img page15-img6-1"src="Frame_16/คลิก.png"></div>
+              <div id="sm-page15-img7" class="sm-page15-img sm-page15-img7"><img class="page15-img page15-img7-1"src="Frame_16/คลิก.png"></div>
+            </div>
+            <div id="sm-page15-img3" class="sm-page15-img sm-page15-img3"><img class="page15-img page15-img3-1"src="Frame_16/คำอธิบาย.png"></div>
+            <div id="sm-page15-img4" class="sm-page15-img sm-page15-img4"><img class="page15-img page15-img4-1"src="Frame_16/ไปต่อ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page16_1" class="page page16_1">
+          <div id="sm-page16-1" class="sm-page16-1">
+            <div id="sm-page16-1-img1" class="sm-page16-1-img sm-page16-1-img1"><img class="page16-1-img page16-1-img1-1"src="Frame_17/HOMELESS_22.png"></div>
+            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"src="Frame_17/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page16_2" class="page page16_2">
+          <div id="sm-page16-1" class="sm-page16-1">
+            <div id="sm-page16-1-img1" class="sm-page16-1-img sm-page16-1-img1"><img class="page16-1-img page16-2-img1-1"src="Frame_17/HOMELESS_23.png"></div>
+            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"src="Frame_17/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page16_3" class="page page16_3">
+          <div id="sm-page16-1" class="sm-page16-1">
+            <div id="sm-page16-1-img1" class="sm-page16-1-img sm-page16-1-img1"><img class="page16-1-img page16-1-img1-1"src="Frame_17/HOMELESS_24.png"></div>
+            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"src="Frame_17/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page17" class="page page17">
+          
+        </div>
+      </section>
+      <section>
+        <div id="page18" class="page page18">
+          <div id="sm-page18" class="sm-page18">
+            <div id="sm-page18-img1" class="sm-page18-img sm-page18-img1"><img class="page18-img page18-img1-1"src="Frame_18-26/HOMELESS_25.GIF"></div>
+            <div id="sm-page18-txt" class="sm-page18-img sm-page18-txt">ฝนตกแล้วน้า ทำไงดี<br>- พี่ชาติ -</div>
+            <div id="sm-page18-img2" class="sm-page18-img sm-page18-img2"><img class="page18-img page18-img2-1"src="Frame_18-26/HOMELESS_25.GIF"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page19" class="page page19">
+          <div id="sm-page19" class="sm-page19">
+            <div id="sm-page19-img1" class="sm-page19-img sm-page19-img1"><img class="page19-img page19-img1-1"src="Frame_18-26/HOMELESS_26.GIF"></div>
+            <div id="sm-page19-txt" class="sm-page19-img sm-page19-txt">วิ่งดิ!! รอไร<br>- น้าเขียว -</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page20" class="page page20">
+          <div id="sm-page19" class="sm-page19">
+            <div id="sm-page19-txt" class="sm-page19-img sm-page19-txt">เทศกิจมาแล้วพี่ รีบเลย<br>- พี่เชอร์รี่ -</div>
+            <div id="sm-page19-img1" class="sm-page19-img sm-page19-img1"><img class="page19-img page19-img1-1"src="Frame_18-26/HOMELESS_27.GIF"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page21" class="page page21">
+          <div id="sm-page21" class="sm-page21">
+            <div id="sm-page21-txt" class="sm-page21-img sm-page21-txt">โคตรสกปรกเลยว่ะ มาอยู่ได้ทุกวัน<br>- ชาวบ้าน 1 -</div>
+            <div id="sm-page21-img1" class="sm-page21-img sm-page21-img1"><img class="page21-img page21-img1-1"src="Frame_18-26/HOMELESS_28.GIF"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page22" class="page page22">
+          <div id="sm-page22" class="sm-page22">
+            <div id="sm-page22-txt" class="sm-page22-img sm-page22-txt">เหม็น! ออกจากร้านไปเลยนะ<br>- ชาวบ้าน 2 -</div>
+            <div id="sm-page22-img1" class="sm-page22-img sm-page22-img1"><img class="page22-img page21-img1-1"src="Frame_18-26/HOMELESS_29.GIF"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page23" class="page page23">
+          <div id="sm-page18" class="sm-page18">
+            <div id="sm-page23-img1" class="sm-page23-img sm-page23-img1"><img class="page23-img page23-img1-1"src="Frame_18-26/HOMELESS_30.GIF"></div>
+            <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">ยังไม่อาบน้ำก็สาดใส่เลย ฮ่าๆ<br>- ชาวบ้าน 3 -</div>
+            <div id="sm-page23-img2" class="sm-page23-img sm-page23-img2"><img class="page23-img page23-img2-1"src="Frame_18-26/HOMELESS_31.GIF"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page24" class="page page24">
+          <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">....<br><br><br>ในที่สุดฝนก็หยุดตกสักที<br><br><br>"แฮ่กๆ"<br>"เหนื่อยโว้ย"<br>"เอาหน่า ถือว่าออกกำลังกาย"</div>
+        </div>
+      </section>
+      <section>
+        <div id="page25" class="page page25">
+          <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">"เหรียญก็มีสองด้าน มีคนดี ก็ต้องมีคนไม่ดี<br>ไม่แปลกหรอกที่พวกเขาจะรังเกียจเรา<br>เพราะความไม่มีนี่แหละ ทำให้เราต้องดิ้นรน"<br><br><br>"บ้างก็ลักขโมย บ้างก็เก็บขวดขาย<br>บ้างก็ใช้ร่างกาย เหมือนเป็นหมาล่าเนื้อ<br>อยู่รอดไปวัน ๆ"<br><br><br>- พี่เชอร์รี่ -</div>
+        </div>
+      </section>
+      <section>
+        <div id="page26" class="page page26">
+          <div id="sm-page26" class="sm-page26">
+            <div id="sm-page26-img1" class="sm-page26-img sm-page26-img1"><img class="page26-img page26-img1-1"src="Frame_27/HOMELESS_32.png">
+              <div id="sm-page26-img4" class="sm-page26-img sm-page26-img4"><img class="page26-img page26-img4-1"src="Frame_27/Text_16.png"></div>
+            </div>
+            <div id="sm-page26-img2" class="sm-page26-img sm-page26-img2"><img class="page26-img page26-img2-1"src="Frame_27/HOMELESS_33.png">
+              <div id="sm-page26-img5" class="sm-page26-img sm-page26-img5"><img class="page26-img page26-img5-1"src="Frame_27/Text_17.png"></div>
+            </div>
+            <div id="sm-page26-img3" class="sm-page26-img sm-page26-img3"><img class="page26-img page26-img3-1"src="Frame_27/HOMELESS_34.png">
+              <div id="sm-page26-img6" class="sm-page26-img sm-page26-img6"><img class="page26-img page26-img6-1"src="Frame_27/Text_18.png"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page27" class="page page27">
+          <div id="sm-page27-img1" class="sm-page27-img sm-page27-img1"><img class="page27-img page27-img1-1"src="Frame_28/HOMELESS_35.png"></div>
+        </div>
+      </section>
+      <section>
+        <div id="page28" class="page page28">
+          <div id="sm-page28" class="sm-page28">
+            <div id="sm-page28-txt" class="sm-page28-img sm-page28-txt">ท้ายที่สุดแล้วชีวิตก็ต้องดำเนินต่อไป<br>พวกคุณคงรู้แล้วว่าเราต้องผ่านอะไรกันมาบ้าง<br><br>หลายคนมักจะถามผมเสมอว่า<br>
+              ช่วยเหลืออะไรได้บ้าง<br>
+              มีเป้าหมายในชีวิตมั้ย<br>
+              ความฝันของผมคืออะไร<br>
+              <br>
+              ผมก็จะตอบว่า แค่พวกคุณยิ้มกว้างให้กับเรา<br>
+              <br>
+              แค่เสื้อสะอาด  ชีวิตผมก็เปลี่ยน<br>
+              แค่มีข้าวกิน ท้องผมก็ไม่ร้อง<br>
+              แค่ให้โอกาส ผมก็มีความสุข<br>
+              <br>
+              โลกที่ไม่มีคนไร้บ้านแล้ว คงจะปลอดภัยสำหรับทุกคน รวมถึงตัวผมเอง<br>
+              <br>
+              เอาล่ะ ผมคงต้องไปทำงานแล้ว<br>
+              ถ้าเจอกันข้างนอกก็แวะทักทายพูดคุยกันได้<br>
+              ส่วนใครถ้าอยากช่วยเหลือพวกเรา ก็สามารถติดต่อไปยังช่องทางนี้ได้เลยครับ<br>
+              </div>
+            <div id="sm-page28-img1" class="sm-page28-img sm-page28-img1"><img class="page28-img page28-img1-1"src="Frame_29/HOMELESS_36.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page29" class="page page29">
+          <div id="sm-page29" class="sm-page29">
+            <div id="sm-page29-img1" class="sm-page29-img sm-page29-img1"><img class="page29-img page29-img1-1"src="Frame_30/HOMELESS_37.png"></div>
+            <div id="sm-page29-txt" class="sm-page29-img sm-page29-txt">ช่องทางการติดต่อ<br>สายด่วน: 1800<br>ศูนย์คนไร้บ้าน โทร 083-932-8389<br>Email: Homelessknow@gmail.com</div>
+            <div id="sm-page29-img2" class="sm-page29-img sm-page29-img2"><img class="page29-img page29-img2-1"src="Frame_30/ย้อนกลับ.png"></div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
-
