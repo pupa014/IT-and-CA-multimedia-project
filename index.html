@@ -1119,6 +1119,163 @@
         height:auto;
         box-sizing:border-box;
       }
+      .page2_mobi{
+        background-image:url("Frame_3/bg_phone.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page2_mobi{
+        background-image:url("Frame_3/Homeless_phone.jpg");
+        width:80vw;
+        height:80vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: content;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+      }
+      .sm-page2-img_mobi{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page2-img_mobi{
+        max-width:40vw;
+        height:auto;
+      }
+      .page3_mobi{
+        background-image:url("Frame_3/bg_phone.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page3_mobi{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows:repeat(2,1fr);
+      }
+      .sm-page3-img_mobi{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page3-img1_mobi{
+        grid-row:1/2;
+        grid-column: 1/5;
+      }
+      .sm-page3-img4_mobi{
+        grid-row:2/3;
+        grid-column: 1/4;
+      }
+      .sm-page3-img5_mobi{
+        grid-row:2/3;
+        grid-column: 4/5;
+      }
+      .page3-img1_mobi{
+        max-width:80vw;
+        height:auto;
+        position:relative;
+        left:50%;
+      }
+      .page3-img2_mobi{
+        max-width:40vw;
+        height:auto;
+        position:relative;
+        right:100%;
+      }
+      .page3-img3_mobi{
+        max-width:40vw;
+        height:auto;
+        position:relative;
+        right:100%;
+      }
+      .page3-img4_mobi{
+        max-width:80vw;
+        height:auto;
+      }
+      .page3-img5_mobi{
+        max-width:60vw;
+        height:auto;
+      }
+      .sm-page3-img2_mobi{
+        position:relative;
+        top:-30%;
+      }
+      .sm-page3-img3_mobi{
+        position:relative;
+        top:30%;
+      }
+      .sm-page3-img5_mobi{
+        position:relative;
+        top:20%;
+      }
+      .page4_mobi{
+        background-color:black;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page4_mobi{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+      }
+      .sm-page4-img_mobi{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page4-img1_mobi{
+        grid-column:1/4;
+      }
+      .page4-img1_mobi{
+        max-width:55vw;
+        height:auto;
+      }
+      .page4-img2_mobi{
+        max-width:20vw;
+        height:auto;
+      }
+      .sm-page4-img2_mobi{
+        position:relative;
+        top:25%;
+      }
+      .page5_mobi{
+        background-image:url("Frame_3/bg_phone.png");
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .sm-page5_mobi{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+      }
+      .sm-page5-img_mobi{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .page5-img1_mobi{
+        max-width:40vw;
+        height:auto;
+      }
+      .page5-img2_mobi{
+        max-width:50vw;
+        height:auto;
+        position:relative;
+        right:15%;
+      }
     </style>
   </head>
   <body>
@@ -1434,6 +1591,44 @@
         <div id="page1_mobi" class="page page1_mobi">
           <h1 class="page1-txt_mobi">ทุกวันนี้เราเห็นอะไรบ้าง</h1>
           <img id="page1_click_mobi" class="page1-click_mobi" onclick="myMove1_mobi()" src="Frame_2/คลิก_phone.png">
+        </div>
+      </section>
+      <section>
+        <div id="page2_mobi" class="page page2_mobi" onclick="myMove2_mobi()">
+          <div id="sm-page2_mobi" class="sm-page2_mobi">
+            <div id="sm-page2-img1_mobi" class="sm-page2-img_mobi sm-page2-img1_mobi"><img class="page2-img_mobi page2-img1_mobi"src="Frame_3/text_1_phone.png"></div>
+            <div id="sm-page2-img2_mobi" class="sm-page2-img_mobi sm-page2-img2_mobi"><img class="page2-img_mobi page2-img2_mobi"src="Frame_3/text_2_phone.png"></div>
+            <div id="sm-page2-img3_mobi" class="sm-page2-img_mobi sm-page2-img3_mobi"><img class="page2-img_mobi page2-img3_mobi"src="Frame_3/text_3_phone.png"></div>
+            <div id="sm-page2-img4_mobi" class="sm-page2-img_mobi sm-page2-img4_mobi"><img class="page2-img_mobi page2-img4_mobi"src="Frame_3/text_4_phone.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page3_mobi" class="page page3_mobi">
+          <div id="sm-page3_mobi" class="sm-page3_mobi">
+            <div id="sm-page3-img1_mobi" class="sm-page3-img_mobi sm-page3-img1_mobi"><img class="page3-img_mobi page3-img1_mobi"src="Frame_4/Homeless_2_phone.png">
+              <div id="sm-page3-img2_mobi" class="sm-page3-img_mobi sm-page3-img2_mobi"><img class="page3-img_mobi page3-img2_mobi"src="Frame_4/Text_5_phone.png"></div>
+              <div id="sm-page3-img3_mobi" class="sm-page3-img_mobi sm-page3-img3_mobi"><img class="page3-img_mobi page3-img3_mobi"src="Frame_4/Text_6_phone.png"></div>
+            </div>
+            <div id="sm-page3-img4_mobi" class="sm-page3-img_mobi sm-page3-img4_mobi"><img class="page3-img_mobi page3-img4_mobi"src="Frame_4/newspaper_phone.png"></div>
+            <div id="sm-page3-img5_mobi" class="sm-page3-img_mobi sm-page3-img5_mobi"><img class="page3-img_mobi page3-img5_mobi"src="Frame_4/อ่านต่อ_phone.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page4_mobi" class="page page4_mobi">
+          <div id="sm-page4_mobi" class="sm-page4_mobi">
+            <div id="sm-page4-img1_mobi" class="sm-page4-img_mobi sm-page4-img1_mobi"><img class="page4-img_mobi page4-img1_mobi"src="Frame_5/Newspaper_2_phone.png"></div>
+            <div id="sm-page4-img2_mobi" class="sm-page4-img_mobi sm-page4-img2_mobi"><img class="page4-img_mobi page4-img2_mobi"src="Frame_5/พลิกหน้าถัดไป_phone.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="page5_mobi" class="page page5_mobi">
+          <div id="sm-page5_mobi" class="sm-page5_mobi">
+            <div id="sm-page5-img1_mobi" class="sm-page5-img_mobi sm-page5-img1_mobi"><img class="page5-img_mobi page5-img1_mobi"src="Frame_6/Homeless_3_phone.png"></div>
+            <div id="sm-page5-img2_mobi" class="sm-page5-img_mobi sm-page5-img2_mobi"><img class="page5-img_mobi page5-img2_mobi"src="Frame_6/Text_7_phone.png"></div>
+          </div>
         </div>
       </section>
     </div>
