@@ -1098,7 +1098,7 @@
         color:white;
         pointer-events:none;
       }
-      .page1_mobi:hover{
+      .page1_mobi:active{
         background-image:url("Frame_2/Frame_2_2_phone.jpg");
       }
       .page1-txt_mobi{
@@ -1433,7 +1433,7 @@
       <section>
         <div id="page1_mobi" class="page page1_mobi">
           <h1 class="page1-txt_mobi">ทุกวันนี้เราเห็นอะไรบ้าง</h1>
-          <img id="page1_click_mobi" class="page1-click_mobi" onclick="myMove1()" src="Frame_2/คลิก_phone.png">
+          <img id="page1_click_mobi" class="page1-click_mobi" onclick="myMove1_mobi()" src="Frame_2/คลิก_phone.png">
         </div>
       </section>
     </div>
@@ -1443,6 +1443,13 @@
       }
       function myMove2(){
         document.getElementById("container").style.transform = "translateX(-200vw)";
+      }
+      /*mobile*/
+      function myMove1_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-100vw)";
+      }
+      function myMove2_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-200vw)";
       }
     </script>
   </body>
