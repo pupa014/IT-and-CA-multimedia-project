@@ -17,6 +17,7 @@
           padding:0;
           box-sizing:border-box;
           overflow-y:hidden;
+          overflow-x:hidden;
           width:100%;
           height:100%;
         }
@@ -33,6 +34,7 @@
           padding:0;
           box-sizing:border-box;
           overflow-y:hidden;
+          overflow-x:hidden;
           width:100%;
           height:100%;
         }
@@ -69,29 +71,32 @@
         text-align:center;
         margin:0;
         padding:0;
-        top:10%;
+        top:15%;
         font-size:2.5vw;
         box-sizing:border-box;
       }
       .page1-click{
         position:relative;
-        top:51.5%;
-        left:31.25%;
+        top:50%;
+        left:31%;
         pointer-events:auto;
         max-width:10vw;
         height:auto;
         box-sizing:border-box;
+        cursor: pointer;
       }
       .page2{
         background-image:url("Frame_3/Bg.png");
         display:flex;
         align-items:center;
         justify-content:center;
+        transition-duration: 1s;
+        cursor: pointer;
       }
       .sm-page2{
         background-image:url("Frame_3/HOMELESS_1.png");
-        width:65vw;
-        height:65vh;
+        width:80vw;
+        height:80vh;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -106,73 +111,74 @@
         justify-content:center;
       }
       .page2-img{
-        max-width:30vw;
+        max-width:35vw;
         height:auto;
       }
-      .page3{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+      .sm-page2-img2, .sm-page2-img3, .sm-page2-img4{
+        opacity: 0;
       }
       .sm-page3{
-        width:75vw;
-        height:75vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        grid-template-rows:repeat(3,1fr);
-        
+        display:none;
+        grid-template-columns:repeat(5,1fr);
+        grid-template-rows:repeat(2,1fr);
       }
       .sm-page3-img{
         display:flex;
         align-items:center;
         justify-content:center;
       }
-      .page3-img1{
-        right:100%;
+      .sm-page3-img1{
+        grid-row:1/2;
+        grid-column:1/3;
       }
       .sm-page3-img2{
-        grid-column: 2/4;
+        grid-row:1/2;
+        grid-column:3/6;
       }
       .sm-page3-img3{
-        grid-row:2/4;
+        grid-row:2/3;
+        grid-column:1/3;
       }
       .sm-page3-img4{
-        grid-column: 3/4;
-        grid-row:3/4;
+        grid-row:2/3;
+        grid-column:3/4;
       }
       .sm-page3-img5{
-        grid-column: 2/3;
-        grid-row:3/4;
+        grid-row:2/3;
+        grid-column:4/6;
+      }
+      .sm-page3-img3, .sm-page3-img4, .sm-page3-img5{
+        opacity:0;
       }
       .page3-img1{
+        max-width:32vw;
+        height:auto;
         position:relative;
         left:25%;
-        max-width:30vw;
-        height:auto;
       }
       .page3-img2{
-        max-width:50vw;
+        max-width:48vw;
         height:auto;
       }
       .page3-img3{
-        position:relative;
-        left:20%;
-        max-width:30vw;
+        max-width:32vw;
         height:auto;
       }
       .page3-img4{
-        position:relative;
-        bottom:25%;
-        max-width:30vw;
-        height:auto;
-      }
-      .page3-img5{
-        position:relative;
-        top:40%;
         max-width:10vw;
         height:auto;
+        position:relative;
+        top:30%;
+        cursor: pointer;
+      }
+      .page3-img5{
+        max-width:32vw;
+        height:auto;
+        position:relative;
+        top:-25%;
       }
       .page4{
         background-color:black;
@@ -198,19 +204,21 @@
       .page4-img1{
         max-width:30vw;
         height:auto;
+        cursor:zoom-in;
       }
       .page4-img2{
         position:relative;
-        right:20%;
-        top:45%;
-        max-width:20vw;
+        top:40%;
+        max-width:15vw;
         height:auto;
+        cursor: pointer;
       }
       .page5{
         background-image:url("Frame_3/Bg.png");
         display:flex;
         align-items:center;
         justify-content:center;
+        cursor: pointer;
       }
       .sm-page5{
         width:80vw;
@@ -225,115 +233,110 @@
         justify-content:center;
       }
       .page5-img1{
-        position:relative;
-        left:20%;
         max-width:20vw;
         height:auto;
+        position:relative;
+        left:15%;
       }
       .page5-img2{
-        position:relative;
-        bottom:10%;
-        right:20%;
-        max-width:40vw;
+        max-width:45vw;
         height:auto;
-      }
-      .page6{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        position:relative;
+        right:15%;
       }
       .sm-page6{
-        width:90vw;
-        height:90vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(6,1fr);
       }
       .sm-page6-img1{
         grid-column:2/6;
         background-image:url("Frame_7/Map.png");
         background-position: center;
-        background-size:90%;
+        background-size:80%;
         background-repeat:no-repeat;
-      }
-      .sm-page6-img1-1{
-        position:relative;
-        top:45%;
-        left:25%;
-      }
-      .sm-page6-img2-2{
-        position:relative;
-        top:8%;
-        left:52.5%;
-      }
-      .sm-page6-img3-3{
-        position:relative;
-        top:15%;
-        left:70%;
-      }
-      .page6-img1-1{
-        max-width:10vw;
-        height:auto;
-      }
-      .page6-img2-2{
-        max-width:10vw;
-        height:auto;
-      }
-      .page6-img3-3{
-        max-width:10vw;
-        height:auto;
-      }
-      .sm-page6-img2{
-        position:relative;
-        top:85%;
-        right:70%;
       }
       .page6-img2{
         max-width:12vw;
         height:auto;
+        position: relative;
+        top:90%;
       }
-      .page7_1, .page7_2, .page7_3{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+      .sm-page6-img2{
+        opacity:0;
+        transition-duration: 1s;
+      }
+      .page6-img2{
+        cursor: pointer;
+      }
+      .page6-img1-1{
+        max-width:10vw;
+        height:auto;
+        position: relative;
+        left:20%;
+        cursor: pointer;
+      }
+      .page6-img2-2{
+        max-width:10vw;
+        height:auto;
+        position: relative;
+        left:50%;
+        cursor: pointer;
+      }
+      .page6-img3-3{
+        max-width:10vw;
+        height:auto;
+        position: relative;
+        left:70%;
+        cursor: pointer;
+      }
+      .sm-page6-img1-1{
+        position: relative;
+        top:40%;
+      }
+      .sm-page6-img2-2{
+        position: relative;
+        top:10%;
+      }
+      .sm-page6-img3-3{
+        position: relative;
+        top:20%;
       }
       .sm-page7_1, .sm-page7_2, .sm-page7_3{
-        width:90vw;
-        height:90vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(6,1fr);
       }
       .sm-page7_1-img1{
         grid-column:2/6;
         background-image:url("Frame_8/ชาติ.png");
         background-position: center;
-        background-size:90%;
+        background-size:80%;
         background-repeat:no-repeat;
       }
-      .sm-page7_1-img2, .sm-page7_2-img2, .sm-page7_3-img2{
-        position:relative;
-        top:87.5%;
-        right:65%;
-      }
       .page7_1-img2, .page7_2-img2, .page7_3-img2{
-        max-width:10vw;
+        max-width:12vw;
         height:auto;
+        position: relative;
+        top:90%;
+        cursor: pointer;
       }
       .sm-page7_2-img1{
         grid-column:2/6;
         background-image:url("Frame_8/น้าเขียว.png");
         background-position: center;
-        background-size:90%;
+        background-size:80%;
         background-repeat:no-repeat;
       }
       .sm-page7_3-img1{
         grid-column:2/6;
         background-image:url("Frame_8/พี่เชอร์รี่.png");
         background-position: center;
-        background-size:90%;
+        background-size:80%;
         background-repeat:no-repeat;
       }
       .page8{
@@ -341,32 +344,38 @@
         display:flex;
         align-items:center;
         justify-content:center;
+        cursor: pointer;
       }
       .sm-page8{
-        width:75vw;
-        height:75vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
         display:grid;
         grid-template-columns:repeat(3,1fr);
-        grid-template-rows:repeat(6,1fr);
+        grid-template-rows:repeat(2,1fr);
         
       }
       .sm-page8-img{
         display:flex;
         align-items:center;
         justify-content:center;
+        box-sizing:border-box;
       }
       .sm-page8-img1{
-        grid-row:1/3;
+        grid-row:1/2;
         grid-column:1/4;
       }
       .sm-page8-img2{
-        grid-row:4/6;
+        grid-row:2/3;
         grid-column:1/3;
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page8-img3{
-        grid-row:3/7;
+        grid-row:2/3;
         grid-column:3/4;
+        opacity:0;
+        transition-duration: 1s;
       }
       .page8-img1-1{
         max-width:60vw;
@@ -375,39 +384,27 @@
       .page8-img2-1{
         max-width:40vw;
         height:auto;
-        position:relative;
-        left:15%;
-        top:20%;
+        position: relative;
+        left:10%;
       }
       .page8-img3-1{
-        max-width:16vw;
+        max-width:15vw;
         height:auto;
-        position:relative;
-        left:18%;
-        top:15%;
+        position: relative;
+        left:10%;
       }
       .page8-img4-1{
-        max-width:16vw;
+        max-width:15vw;
         height:auto;
-        position:relative;
-        
-      }
-      .sm-page8-img4{
-        position:relative;
-        bottom:40%;
-        right:25%;
-      }
-      .page9{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        position: relative;
+        right:30%;
+        top:-60%;
       }
       .sm-page9{
-        width:75vw;
-        height:75vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(2,1fr);
         grid-template-rows:repeat(2,1fr);
         
@@ -416,78 +413,53 @@
         display:flex;
         align-items:center;
         justify-content:center;
+        box-sizing:border-box;
       }
       .page9-img1-1{
         max-width:50vw;
         height:auto;
-      }
-      .page9-img1-1{
-        max-width:50vw;
-        height:auto;
-      }
-      .sm-page9-img2{
-        position:relative;
-        bottom:40%;
-        right:50%;
-      }
-      .page9-img2-1{
-        max-width:15vw;
-        height:auto; 
       }
       .page9-img3-1{
         max-width:30vw;
         height:auto;
-      }
-      .sm-page9-img3{
-        position:relative;
-        top:7.5%;
-        right:35%;
-      }
-      .sm-page9-img4{
-        position:relative;
-        bottom:40%;
-        right:50%;
-      }
-      .page9-img4-1{
-        max-width:20vw;
-        height:auto; 
-      }
-      .sm-page9-img5{
-        position:relative;
-        bottom:25%;
-        right:2.5%;
-        grid-row:2/3;
-        grid-column:1/2;
+        position: relative;
+        right:30%;
       }
       .page9-img5-1{
         max-width:30vw;
-        height:auto; 
-      }
-      .sm-page9-img6{
-        position:relative;
-        bottom:32.5%;
-        right:70%;
-        grid-row:2/3;
-        grid-column:2/3;
+        height:auto;
       }
       .page9-img6-1{
-        max-width:40vw;
-        height:auto; 
+        max-width:30vw;
+        height:auto;
+        position: relative;
+        right:60%;
       }
-      .page10{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+      .page9-img2-1{
+        max-width:12vw;
+        height:auto;
+        position: relative;
+        right:50%;
+        top:-30%;
+      }
+      .page9-img4-1{
+        max-width:15vw;
+        height:auto;
+        position: relative;
+        right:75%;
+        top:-30%;
+      }
+      .sm-page9-img3, .sm-page9-img5, .sm-page9-img6{
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page10{
         width:80vw;
         height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(4,1fr);
-        grid-template-rows:repeat(5,1fr);
-        
+        grid-template-rows:repeat(3,1fr);
       }
       .sm-page10-img{
         display:flex;
@@ -495,82 +467,76 @@
         justify-content:center;
       }
       .sm-page10-img1{
-        grid-row:1/3;
+        grid-row:1/2;
         grid-column:1/3;
       }
       .sm-page10-img2{
-        grid-row:3/6;
+        grid-row:2/4;
         grid-column:1/2;
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page10-img3{
-        grid-row:3/6;
+        grid-row:2/4;
         grid-column:2/3;
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page10-img4{
-        grid-row:1/6;
+        grid-row:1/4;
         grid-column:3/4;
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page10-img5{
-        grid-row:1/6;
+        grid-row:1/4;
         grid-column:4/5;
+        opacity:0;
+        transition-duration: 1s;
       }
       .page10-img1-1{
-        max-width:25vw;
-        height:auto; 
-        position:relative;
-        left:30%; 
+        max-width:30vw;
+        height:auto;
+        position: relative;
+        left:25%;
       }
       .page10-img2-1{
         max-width:15vw;
-        height:auto; 
-        position:relative;
-        left:22.5%; 
+        height:auto;
+        position: relative;
+        left:10%;
       }
       .page10-img3-1{
         max-width:15vw;
-        height:auto; 
-        position:relative;
-        left:12.5%; 
+        height:auto;
+        position: relative;
+        left:10%;
       }
       .page10-img4-1{
         max-width:20vw;
-        height:auto; 
-        position:relative;
-        left:12.5%; 
+        height:auto;
+        position: relative;
+        left:10%;
       }
       .page10-img5-1{
         max-width:15vw;
-        height:auto; 
-        position:relative;
-        right:27.5%; 
+        height:auto;
+        position: relative;
+        top:-10%;
+        right:5%;
       }
       .page10-img6-1{
-        max-width:25vw;
+        max-width:20vw;
         height:auto;
-        position:relative;
-        right:10%; 
-      }
-      .sm-page10-img6{
-        position:relative;
-        bottom:30%; 
-      }
-      .sm-page10-img5{
-        position:relative;
-        bottom:15%; 
-      }
-      .page11{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        position: relative;
+        right:5%;
       }
       .sm-page11{
         width:80vw;
         height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-rows:repeat(2,1fr);
-        
       }
       .sm-page11-img{
         display:flex;
@@ -582,26 +548,29 @@
         height:auto;
       }
       .page11-img2-1{
-        max-width:45vw;
+        max-width:40vw;
         height:auto;
-        position:relative;
-        left:16%;
+        position: relative;
+        left:12.5%;
       }
       .page11-img3-1{
-        max-width:25vw;
+        max-width:20vw;
         height:auto;
-        position:relative;
-        right:40%;
+        position: relative;
+        right:12.5%;
+        top:-30%;
       }
-      .sm-page11-img3{
-        position:relative;
-        bottom:40%;
+      .sm-page11-img2{
+        opacity:0;
+        transition-duration: 1s;
       }
       .page12{
         background-image: url("Frame_13/HOMELESS_16.png");
+        cursor: pointer;
       }
       .page13{
         background-image: url("Frame_14/HOMELESS_17.png");
+        cursor: pointer;
       }
       .page14{
         background-image:url("Frame_3/Bg.png");
@@ -615,7 +584,6 @@
         box-sizing:border-box;
         display:grid;
         grid-template-columns:repeat(3,1fr);
-        
       }
       .sm-page14-img{
         display:flex;
@@ -623,49 +591,39 @@
         justify-content:center;
       }
       .page14-img1-1{
-        max-width:17.5vw;
+        max-width:20vw;
         height:auto;
+        position: relative;
+        left:20%;
       }
       .page14-img2-1{
-        max-width:17.5vw;
+        max-width:20vw;
         height:auto;
+        position: relative;
+        left:50%;
       }
       .page14-img3-1{
-        max-width:17.5vw;
+        max-width:20vw;
         height:auto;
+        position: relative;
+        left:40%;
       }
       .page14-img4-1{
-        max-width:15vw;
+        max-width:20vw;
         height:auto;
+        position: relative;
+        right:40%;
+        top:-40%;
       }
-      .sm-page14-img1{
-        position:relative;
-        left:20%;
-      }
-      .sm-page14-img2{
-        position:relative;
-        left:20%;
-      }
-      .sm-page14-img3{
-        position:relative;
-        left:20%;
-      }
-      .sm-page14-img4{
-        position:relative;
-        right:80%;
-        bottom:30%;
-      }
-      .page15{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+      .sm-page14-img2, .sm-page14-img3{
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page15{
-        width:90vw;
-        height:90vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(6,1fr);
         grid-template-rows:repeat(10,1fr);
       }
@@ -675,22 +633,25 @@
         justify-content:center;
       }
       .sm-page15-img1{
-        grid-column:2/6;
+        grid-column:1/7;
       }
       .sm-page15-img2{
-        grid-column:2/6;
+        grid-column:1/7;
         grid-row:2/10;
         background-image:url("Frame_16/HOMELESS_21.png");
         background-position: center;
-        background-size:100%;
+        background-size:80%;
         background-repeat:no-repeat;
       }
       .sm-page15-img3{
         grid-column:2/6;
+        grid-row:10/11;
       }
       .sm-page15-img4{
         grid-column:6/7;
         grid-row:10/11;
+        opacity:0;
+        transition-duration: 1s;
       }
       .page15-img1-1{
         max-width:40vw;
@@ -703,84 +664,71 @@
       .page15-img4-1{
         max-width:12vw;
         height:auto;
-        position:relative;
-        right:75%;
-      }
-      .sm-page15-img5{
-        position:relative;
-        right:25%;
-        top:20%;
-      }
-      .sm-page15-img6{
-        position:relative;
-        left:15%;
-        bottom:40%;
-      }
-      .sm-page15-img7{
-        position:relative;
-        left:20%;
-        top:20%;
+        cursor: pointer;
       }
       .page15-img5-1{
-        max-width:10vw;
+        max-width:7vw;
         height:auto;
+        position: relative;
+        right:20%;
+        top:20%;
+        cursor: pointer;
       }
       .page15-img6-1{
-        max-width:10vw;
+        max-width:7vw;
         height:auto;
+        position: relative;
+        left:12%;
+        top:-40%;
+        cursor: pointer;
       }
       .page15-img7-1{
-        max-width:10vw;
+        max-width:7vw;
         height:auto;
+        position: relative;
+        left:15%;
+        top:20%;
+        cursor: pointer;
       }
-      .page16_1, .page16_2, .page16_3{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page16-1{
-        width:90vw;
-        height:90vh;
+      .sm-page16-1, .sm-page16-2, .sm-page16-3{
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(6,1fr);
       }
-      .sm-page16-1-img1{
+      .sm-page16-1-img1, .sm-page16-2-img1, .sm-page16-3-img1{
         grid-column:2/6;
       }
-      .page16-1-img1-1{
+      .page16-1-img1-1, .page16-2-img1-1, .page16-3-img1-1{
         max-width:50vw;
         height:auto;
       }
-      .page16-2-img1-1{
-        max-width:55vw;
-        height:auto;
-      }
-      .page16-1-img1-2{
+      .page16-1-img1-2, .page16-2-img1-2, .page16-3-img1-2{
         max-width:10vw;
         height:auto;
         position:relative;
-        top:36%;
-        right:70%;
+        top:40%;
+        cursor: pointer;
       }
-      .sm-page16-1-img{
+      .sm-page16-1-img, .sm-page16-2-img, .sm-page16-3-img{
         display:flex;
         align-items:center;
         justify-content:center;
       }
-      .page17, .page18, .page19, .page20, .page21, .page22, .page23, .page24, .page25{
+      .page17{
         background-color:black;
         display:flex;
         align-items:center;
         justify-content:center;
         color:white;
+        cursor: pointer;
       }
       .sm-page18{
         width:80vw;
         height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(5,1fr);
         grid-template-rows:repeat(5,1fr);
       }
@@ -812,50 +760,45 @@
         font-size:1.5vw;
       }
       .page18-img1-1{
-        max-width:60vw;
-        height:auto;
-      }
-      .page18-img2-1{
         max-width:40vw;
         height:auto;
       }
-      .sm-page19{
-        width:70vw;
-        height:70vh;
+      .page18-img2-1{
+        max-width:30vw;
+        height:auto;
+      }
+      .sm-page19, .sm-page20{
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(2,1fr);
       }
-      .sm-page19-img{
+      .sm-page19-img, .sm-page20-img, .sm-page21-img{
         display:flex;
         align-items:center;
         justify-content:center;
       }
-      .sm-page19-img1{
+      .sm-page19-img1, .sm-page20-img1{
         background-image:url("Frame_18-26/Boarder_5.png");
         background-position: center;
         background-size:70%;
         background-repeat:no-repeat;
       }
-      .sm-page19-txt{
+      .sm-page19-txt, .sm-page20-txt{
         text-align: center;
         font-size:1.5vw;
       }
-      .page19-img1-1{
-        max-width:35vw;
+      .page19-img1-1, .page20-img1-1{
+        max-width:40vw;
         height:auto;
       }
       .sm-page21{
-        width:70vw;
-        height:70vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(5,1fr);
-      }
-      .sm-page21-img{
-        display:flex;
-        align-items:center;
-        justify-content:center;
       }
       .sm-page21-img1{
         background-image:url("Frame_18-26/Boarder_4.png");
@@ -874,10 +817,10 @@
         height:auto;
       }
       .sm-page22{
-        width:70vw;
-        height:70vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-rows:repeat(5,1fr);
       }
       .sm-page22-img{
@@ -897,8 +840,16 @@
         grid-row:1/3;
       }
       .page22-img1-1{
-        max-width:35vw;
+        max-width:50vw;
         height:auto;
+      }
+      .sm-page23{
+        width:80vw;
+        height:80vh;
+        box-sizing:border-box;
+        display:none;
+        grid-template-columns:repeat(5,1fr);
+        grid-template-rows:repeat(5,1fr);
       }
       .sm-page23-img{
         display:flex;
@@ -908,18 +859,10 @@
       .sm-page23-img1{
         grid-row:1/3;
         grid-column:1/3;
-        
-        background-position: center;
-        background-size:80%;
-        background-repeat:no-repeat;
       }
       .sm-page23-img2{
         grid-row:3/6;
         grid-column:4/6;
-        
-        background-position: center;
-        background-size:80%;
-        background-repeat:no-repeat;
       }
       .sm-page23-txt{
         grid-row:3/4;
@@ -935,20 +878,25 @@
         max-width:30vw;
         height:auto;
       }
+      .sm-page24-txt, .sm-page25-txt{
+        display:none;
+        text-align: center;
+        font-size:1.5vw;
+      }
       .page26{
         background-image:url("Frame_3/Bg.png");
         display:flex;
         align-items:center;
         justify-content:center;
+        cursor: pointer;
       }
       .sm-page26{
-        width:75vw;
-        height:75vh;
+        width:80vw;
+        height:80vh;
         box-sizing:border-box;
         display:grid;
         grid-template-columns:repeat(2,1fr);
         grid-template-rows:repeat(5,1fr);
-        
       }
       .sm-page26-img{
         display:flex;
@@ -962,30 +910,19 @@
       }
       .sm-page26-img2{
         grid-row:4/6;
+        opacity:0;
+        transition-duration: 1s;
       }
       .sm-page26-img3{
         grid-row:4/6;
-      }
-      .sm-page26-img4{
-        position:relative;
-        right:55%;
-        bottom:30%;
-      }
-      .sm-page26-img5{
-        position:relative;
-        right:30%;
-        bottom:50%;
-      }
-      .sm-page26-img6{
-        position:relative;
-        right:30%;
-        bottom:50%;
+        opacity:0;
+        transition-duration: 1s;
       }
       .page26-img1-1{
         max-width:40vw;
         height:auto;
         position:relative;
-        left:11%;
+        left:10%;
       }
       .page26-img2-1{
         max-width:20vw;
@@ -997,41 +934,41 @@
         max-width:20vw;
         height:auto;
         position:relative;
-        left:0%;
+        left:5%;
       }
       .page26-img4-1{
         max-width:15vw;
         height:auto;
+        position:relative;
+        right:50%;
+        top:-20%;
       }
       .page26-img5-1{
         max-width:15vw;
         height:auto;
+        position:relative;
+        right:30%;
+        top:-50%;
       }
       .page26-img6-1{
-        max-width:15vw;
+        max-width:20vw;
         height:auto;
-      }
-      .page27{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        position:relative;
+        right:25%;
+        top:-50%;
       }
       .page27-img1-1{
         max-width:80vw;
         height:auto;
       }
-      .page28{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
+      .sm-page27-img1{
+        display:none;
       }
       .sm-page28{
         width:80vw;
         height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(2,1fr);
       }
       .sm-page28-txt{
@@ -1044,20 +981,14 @@
         justify-content:center;
       }
       .page28-img1-1{
-        max-width:40vw;
+        max-width:25vw;
         height:auto;
-      }
-      .page29{
-        background-image:url("Frame_3/Bg.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
       }
       .sm-page29{
         width:80vw;
         height:80vh;
         box-sizing:border-box;
-        display:grid;
+        display:none;
         grid-template-columns:repeat(6,1fr);
         grid-template-rows:repeat(2,1fr);
       }
@@ -1092,211 +1023,222 @@
       .page29-img2-1{
         max-width:10vw;
         height:auto;
+        cursor: pointer;
       }
       /*mobile*/
       .container_mobi{
-        position:relative;
-        width:100%;
-        transition-duration: 2s;
-      }
+          position:relative;
+          width:100%;
+          transition-duration: 2s;
+        }
       .page1_mobi{
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size:contain;
-        background-color:black;
-        background-image:url("Frame_2/Frame_2_1_phone.jpg");
-        color:white;
-        pointer-events:none;
-      }
-      .page1_mobi:hover{
-        background-image:url("Frame_2/Frame_2_2_phone.jpg");
-      }
-      .page1-txt_mobi{
-        position:relative;
-        text-align:center;
-        margin:0;
-        padding:0;
-        top:25%;
-        font-size:6vw;
-        box-sizing:border-box;
-      }
-      .page1-click_mobi{
-        position:relative;
-        top:47%;
-        left:25%;
-        pointer-events:auto;
-        max-width:12.5vw;
-        height:auto;
-        box-sizing:border-box;
-      }
-      .page2_mobi{
-        background-image:url("Frame_3/bg_phone.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page2_mobi{
-        background-image:url("Frame_3/Homeless_phone.jpg");
-        width:80vw;
-        height:80vh;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: content;
-        box-sizing:border-box;
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        grid-template-rows:repeat(2,1fr);
-      }
-      .sm-page2-img_mobi{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .page2-img_mobi{
-        max-width:40vw;
-        height:auto;
-      }
-      .page3_mobi{
-        background-image:url("Frame_3/bg_phone.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page3_mobi{
-        width:80vw;
-        height:80vh;
-        box-sizing:border-box;
-        display:grid;
-        grid-template-columns:repeat(4,1fr);
-        grid-template-rows:repeat(2,1fr);
-      }
-      .sm-page3-img_mobi{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page3-img1_mobi{
-        grid-row:1/2;
-        grid-column: 1/5;
-      }
-      .sm-page3-img4_mobi{
-        grid-row:2/3;
-        grid-column: 1/4;
-      }
-      .sm-page3-img5_mobi{
-        grid-row:2/3;
-        grid-column: 4/5;
-      }
-      .page3-img1_mobi{
-        max-width:80vw;
-        height:auto;
-        position:relative;
-        left:50%;
-      }
-      .page3-img2_mobi{
-        max-width:40vw;
-        height:auto;
-        position:relative;
-        right:100%;
-      }
-      .page3-img3_mobi{
-        max-width:40vw;
-        height:auto;
-        position:relative;
-        right:100%;
-      }
-      .page3-img4_mobi{
-        max-width:80vw;
-        height:auto;
-      }
-      .page3-img5_mobi{
-        max-width:60vw;
-        height:auto;
-      }
-      .sm-page3-img2_mobi{
-        position:relative;
-        top:-30%;
-      }
-      .sm-page3-img3_mobi{
-        position:relative;
-        top:30%;
-      }
-      .sm-page3-img5_mobi{
-        position:relative;
-        top:20%;
-      }
-      .page4_mobi{
-        background-color:black;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page4_mobi{
-        width:80vw;
-        height:80vh;
-        box-sizing:border-box;
-        display:grid;
-        grid-template-columns:repeat(4,1fr);
-      }
-      .sm-page4-img_mobi{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page4-img1_mobi{
-        grid-column:1/4;
-      }
-      .page4-img1_mobi{
-        max-width:55vw;
-        height:auto;
-      }
-      .page4-img2_mobi{
-        max-width:20vw;
-        height:auto;
-      }
-      .sm-page4-img2_mobi{
-        position:relative;
-        top:25%;
-      }
-      .page5_mobi{
-        background-image:url("Frame_3/bg_phone.png");
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .sm-page5_mobi{
-        width:80vw;
-        height:80vh;
-        box-sizing:border-box;
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-      }
-      .sm-page5-img_mobi{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
-      .page5-img1_mobi{
-        max-width:40vw;
-        height:auto;
-      }
-      .page5-img2_mobi{
-        max-width:50vw;
-        height:auto;
-        position:relative;
-        right:15%;
-      }
-      .page6_mobi{
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size:contain;
+          background-color:black;
+          background-image:url("Frame_2/Frame_2_1_phone.jpg");
+          color:white;
+          pointer-events:none;
+        }
+        .page1_mobi:hover{
+          background-image:url("Frame_2/Frame_2_2_phone.jpg");
+        }
+        .page1-txt_mobi{
+          position:relative;
+          text-align:center;
+          margin:0;
+          padding:0;
+          top:25%;
+          font-size:6vw;
+          box-sizing:border-box;
+        }
+        .page1-click_mobi{
+          position:relative;
+          top:47%;
+          left:25%;
+          pointer-events:auto;
+          max-width:12.5vw;
+          height:auto;
+          box-sizing:border-box;
+        }
+        .page2_mobi{
           background-image:url("Frame_3/bg_phone.png");
           display:flex;
           align-items:center;
           justify-content:center;
         }
-        .sm-page6_mobi{
+        .sm-page2_mobi{
+          background-image:url("Frame_3/Homeless_phone.jpg");
+          width:80vw;
+          height:80vh;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: content;
+          box-sizing:border-box;
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+          grid-template-rows:repeat(2,1fr);
+        }
+        .sm-page2-img_mobi{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .page2-img_mobi{
+          max-width:40vw;
+          height:auto;
+        }
+        .sm-page2-img2_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page2-img3_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page2-img4_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page3_mobi{
+          width:80vw;
+          height:80vh;
+          box-sizing:border-box;
+          display:none;
+          grid-template-columns:repeat(4,1fr);
+          grid-template-rows:repeat(2,1fr);
+        }
+        .sm-page3-img_mobi{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .sm-page3-img1_mobi{
+          grid-row:1/2;
+          grid-column: 1/5;
+        }
+        .sm-page3-img4_mobi{
+          grid-row:2/3;
+          grid-column: 1/4;
+        }
+        .sm-page3-img5_mobi{
+          grid-row:2/3;
+          grid-column: 4/5;
+        }
+        .page3-img1_mobi{
+          max-width:80vw;
+          height:auto;
+          position:relative;
+          left:50%;
+        }
+        .page3-img2_mobi{
+          max-width:40vw;
+          height:auto;
+          position:relative;
+          right:100%;
+        }
+        .page3-img3_mobi{
+          max-width:40vw;
+          height:auto;
+          position:relative;
+          right:100%;
+        }
+        .page3-img4_mobi{
+          max-width:80vw;
+          height:auto;
+        }
+        .page3-img5_mobi{
+          max-width:60vw;
+          height:auto;
+        }
+        .sm-page3-img2_mobi{
+          position:relative;
+          top:-30%;
+        }
+        .sm-page3-img3_mobi{
+          position:relative;
+          top:30%;
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page3-img4_mobi{
+          position:relative;
+          top:30%;
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page3-img5_mobi{
+          position:relative;
+          top:20%;
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .page4_mobi{
+          background-color:black;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .sm-page4_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
           display:grid;
+          grid-template-columns:repeat(4,1fr);
+        }
+        .sm-page4-img_mobi{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .sm-page4-img1_mobi{
+          grid-column:1/4;
+        }
+        .page4-img1_mobi{
+          max-width:55vw;
+          height:auto;
+        }
+        .page4-img2_mobi{
+          max-width:20vw;
+          height:auto;
+        }
+        .sm-page4-img2_mobi{
+          position:relative;
+          top:25%;
+        }
+        .page5_mobi{
+          background-image:url("Frame_3/bg_phone.png");
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .sm-page5_mobi{
+          width:80vw;
+          height:80vh;
+          box-sizing:border-box;
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+        }
+        .sm-page5-img_mobi{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .page5-img1_mobi{
+          max-width:40vw;
+          height:auto;
+        }
+        .page5-img2_mobi{
+          max-width:50vw;
+          height:auto;
+          position:relative;
+          right:15%;
+        }
+        .sm-page6_mobi{
+          width:80vw;
+          height:80vh;
+          box-sizing:border-box;
+          display:none;
           grid-template-rows:repeat(6,1fr);
         }
         .sm-page6-img_mobi{
@@ -1316,6 +1258,10 @@
           height:auto;
           position:relative;
           left:30%;
+        }
+        .sm-page6-img2_mobi{
+          opacity:0;
+          transition-duration: 1s;
         }
         .page6-img1-1_mobi{
           max-width:20vw;
@@ -1343,17 +1289,11 @@
           position:relative;
           top:10%;
         }
-        .page7_1_mobi, .page7_2_mobi, .page7_3_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page7_1_mobi, .sm-page7_2_mobi, .sm-page7_3_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(6,1fr);
         }
         .sm-page7_1-img1_mobi{
@@ -1407,14 +1347,20 @@
         }
         .sm-page8-img2_mobi{
           grid-column:1/3;
+          opacity:0;
+          transition-duration: 1s;
         }
         .sm-page8-img3_mobi{
           grid-row:3/5;
           grid-column:1/2;
+          opacity:0;
+          transition-duration: 1s;
         }
         .sm-page8-img4_mobi{
           grid-row:3/5;
           grid-column:2/3;
+          opacity:0;
+          transition-duration: 1s;
         }
         .page8-img1-1_mobi{
           max-width:80vw;
@@ -1432,17 +1378,11 @@
           max-width:40vw;
           height:auto;
         }
-        .page9_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page9_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(4,1fr);
           grid-template-columns:repeat(2,1fr);
         }
@@ -1456,14 +1396,20 @@
         }
         .sm-page9-img2_mobi{
           grid-column:1/3;
+          opacity:0;
+          transition-duration: 1s;
         }
         .sm-page9-img3_mobi{
           grid-row:3/5;
           grid-column:1/2;
+          opacity:0;
+          transition-duration: 1s;
         }
         .sm-page9-img4_mobi{
           grid-row:3/5;
           grid-column:2/3;
+          opacity:0;
+          transition-duration: 1s;
         }
         .page9-img1-1_mobi{
           max-width:80vw;
@@ -1501,17 +1447,11 @@
           position:relative;
           top:-30%;
         }
-        .page10_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page10_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(3,1fr);
           grid-template-columns:repeat(2,1fr);
         }
@@ -1527,14 +1467,20 @@
         .sm-page10-img2_mobi{
           grid-row:2/3;
           grid-column:1/2;
+          opacity:0;
+          transition-duration: 1s;
         }
         .sm-page10-img3_mobi{
           grid-row:3/4;
           grid-column:1/2;
+          opacity:0;
+          transition-duration: 1s;
         }
         .sm-page10-img4_mobi{
           grid-row:1/4;
           grid-column:2/3;
+          opacity:0;
+          transition-duration: 1s;
         }
         .page10-img1-1_mobi, .page10-img2-1_mobi, .page10-img3-1_mobi{
           max-width:30vw;
@@ -1568,23 +1514,25 @@
           position:relative;
           top:-10%;
         }
-        .page11_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page11_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(3,1fr);
         }
         .sm-page11-img_mobi{
           display:flex;
           align-items:center;
           justify-content:center;
+        }
+        .sm-page11-img2_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page11-img3_mobi{
+          opacity:0;
+          transition-duration: 1s;
         }
         .page11-img1-1_mobi{
           max-width:80vw;
@@ -1629,6 +1577,18 @@
           align-items:center;
           justify-content:center;
         }
+        .sm-page14-img2_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page14-img3_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page14-img4_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
         .page14-img1-1_mobi{
           max-width:40vw;
           height:auto;
@@ -1645,17 +1605,11 @@
           max-width:40vw;
           height:auto;
         }
-        .page15_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page15_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(10,1fr);
           grid-template-columns:repeat(6,1fr);
         }
@@ -1680,6 +1634,8 @@
         }
         .sm-page15-img4_mobi{
           grid-column:6/7;
+          opacity:0;
+          transition-duration: 1s;
         }
         .page15-img1-1_mobi{
           max-width:80vw;
@@ -1723,17 +1679,11 @@
           position:relative;
           top:25%;
         }
-        .page16_1_mobi, .page16_2_mobi, .page16_3_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page16_1_mobi, .sm-page16_2_mobi, .sm-page16_3_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(10,1fr);
         }
         .sm-page16_1-img1_mobi{
@@ -1763,7 +1713,7 @@
           position:relative;
           left:70%;
         }
-        .page17_mobi, .page18_mobi, .page19_mobi, .page20_mobi, .page21_mobi, .page22_mobi, .page23_mobi, .page24_mobi, .page25_mobi{
+        .page17_mobi{
           background-color:black;
           display:flex;
           align-items:center;
@@ -1774,7 +1724,7 @@
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(3,1fr);
         }
         .sm-page18-img_mobi{
@@ -1802,7 +1752,7 @@
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(2,1fr);
         }
         .sm-page19-img_mobi{
@@ -1822,7 +1772,7 @@
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(2,1fr);
         }
         .sm-page20-img_mobi{
@@ -1842,7 +1792,7 @@
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(2,1fr);
         }
         .sm-page21-img_mobi{
@@ -1862,7 +1812,7 @@
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(2,1fr);
         }
         .sm-page22-img_mobi{
@@ -1882,7 +1832,7 @@
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(3,1fr);
         }
         .sm-page23-img_mobi{
@@ -1909,10 +1859,12 @@
         .sm-page24-txt_mobi{
           text-align: center;
           font-size:5vw;
+          display:none;
         }
         .sm-page25-txt_mobi{
           text-align: center;
           font-size:5vw;
+          display:none;
         }
         .page26_mobi{
           background-image:url("Frame_3/bg_phone.png");
@@ -1935,6 +1887,22 @@
         }
         .sm-page26-img1_mobi{
           grid-column:1/3;
+        }
+        .sm-page26-img2_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page26-img3_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page26-img4_mobi{
+          opacity:0;
+          transition-duration: 1s;
+        }
+        .sm-page26-img5_mobi{
+          opacity:0;
+          transition-duration: 1s;
         }
         .page26-img1-1_mobi{
           max-width:80vw;
@@ -1966,32 +1934,21 @@
           position:relative;
           right:40%;
         }
-        .page27_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
-        .sm-page27_mobi{
+        .sm-page27-img1_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
+          display:none;
         }
         .page27-img1-1_mobi{
           max-width:80vw;
           height:auto;
         }
-        .page28_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page28_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(3,1fr);
         }
         .sm-page28-img_mobi{
@@ -2011,17 +1968,11 @@
           text-align: left;
           font-size:3.5vw;
         }
-        .page29_mobi{
-          background-image:url("Frame_3/bg_phone.png");
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
         .sm-page29_mobi{
           width:80vw;
           height:80vh;
           box-sizing:border-box;
-          display:grid;
+          display:none;
           grid-template-rows:repeat(6,1fr);
         }
         .sm-page29-img_mobi{
@@ -2047,20 +1998,14 @@
           position:relative;
           left:30%;
         }
-
-        #icon1, #icon2, #icon3, #icon4, #icon5, #icon6{
-          width: 80px;
-          cursor: pointer;
-        }
     </style>
-
   </head>
   <body>
     <div id="container" class="container">
       <section>
-        <div id="page1" class="page page1">      
+        <div id="page1" class="page page1">
           <h1 class="page1-txt">ทุกวันนี้เราเห็นอะไรบ้าง</h1>
-          <img id="page1_click" onclick="myMove1()" class="page1-click" src="Frame_2/คลิก.png">
+          <img id="page1_click" class="page1-click" onclick="myMove1()" src="Frame_2/คลิก.png">
         </div>
       </section>
       <section>
@@ -2071,16 +2016,12 @@
             <div id="sm-page2-img3" class="sm-page2-img sm-page2-img3"><img class="page2-img page2-img3"src="Frame_3/Text_3.png"></div>
             <div id="sm-page2-img4" class="sm-page2-img sm-page2-img4"><img class="page2-img page2-img4"src="Frame_3/Text_4.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page3" class="page page3">
           <div id="sm-page3" class="sm-page3">
             <div id="sm-page3-img1" class="sm-page3-img sm-page3-img1"><img class="page3-img page3-img1"src="Frame_4/Text_5.png"></div>
             <div id="sm-page3-img2" class="sm-page3-img sm-page3-img2"><img class="page3-img page3-img2"src="Frame_4/HOMELESS_2.png"></div>
             <div id="sm-page3-img3" class="sm-page3-img sm-page3-img3"><img class="page3-img page3-img3"src="Frame_4/Newpaper.png"></div>
-            <div id="sm-page3-img4" class="sm-page3-img sm-page3-img4"><img class="page3-img page3-img4"src="Frame_4/Text_6.png"></div>
-            <div id="sm-page3-img5" class="sm-page3-img sm-page3-img5"><img class="page3-img page3-img5"src="Frame_4/อ่านต่อ.png"></div>
+            <div id="sm-page3-img4" class="sm-page3-img sm-page3-img4"><img class="page3-img page3-img4" onclick="myMove3()" src="Frame_4/อ่านต่อ.png"></div>
+            <div id="sm-page3-img5" class="sm-page3-img sm-page3-img5"><img class="page3-img page3-img5"src="Frame_4/Text_6.png"></div>
           </div>
         </div>
       </section>
@@ -2088,388 +2029,163 @@
         <div id="page4" class="page page4">
           <div id="sm-page4" class="sm-page4">
             <div id="sm-page4-img1" class="sm-page4-img sm-page4-img1"><img class="page4-img page4-img1"src="Frame_5/Newpaper_2.png"></div>
-            <div id="sm-page4-img2" class="sm-page4-img sm-page4-img2"><img class="page4-img page4-img2"src="Frame_5/พลิกหน้าถัดไป.png"></div>
+            <div id="sm-page4-img2" class="sm-page4-img sm-page4-img2"><img class="page4-img page4-img2" onclick="myMove4()" src="Frame_5/พลิกหน้าถัดไป.png"></div>
           </div>
         </div>
       </section>
       <section>
         <div id="page5" class="page page5">
-          <div id="sm-page5" class="sm-page5">
+          <div id="sm-page5" class="sm-page5" onclick="myMove5()">
             <div id="sm-page5-img1" class="sm-page5-img sm-page5-img1"><img class="page5-img page5-img1"src="Frame_6/HOMELESS_3.png"></div>
             <div id="sm-page5-img2" class="sm-page5-img sm-page5-img2"><img class="page5-img page5-img2"src="Frame_6/Text_7.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page6" class="page page6">
           <div id="sm-page6" class="sm-page6">
             <div id="sm-page6-img1" class="sm-page6-img sm-page6-img1">
-              <div id="sm-page6-img1-1" class="sm-page6-img sm-page6-img1-1"><img class="page6-img page6-img1-1"src="Frame_7/Name_1.png"></div>
-              <div id="sm-page6-img2-2" class="sm-page6-img sm-page6-img2-2"><img class="page6-img page6-img2-2"src="Frame_7/Name_2.png"></div>
-              <div id="sm-page6-img3-3" class="sm-page6-img sm-page6-img3-3"><img class="page6-img page6-img3-3"src="Frame_7/Name_3.png"></div>
+              <div id="sm-page6-img1-1" class="sm-page6-img sm-page6-img1-1"><img class="page6-img page6-img1-1" onclick="myMove5_1()"src="Frame_7/Name_1.png"></div>
+              <div id="sm-page6-img2-2" class="sm-page6-img sm-page6-img2-2"><img class="page6-img page6-img2-2" onclick="myMove5_2()"src="Frame_7/Name_2.png"></div>
+              <div id="sm-page6-img3-3" class="sm-page6-img sm-page6-img3-3"><img class="page6-img page6-img3-3" onclick="myMove5_3()"src="Frame_7/Name_3.png"></div>
             </div>
-            <div id="sm-page6-img2" class="sm-page6-img sm-page6-img2"><img class="page6-img page6-img2"src="Frame_7/ไปต่อ.png"></div>
+            <div id="sm-page6-img2" class="sm-page6-img sm-page6-img2"><img class="page6-img page6-img2"onclick="myMove7()"src="Frame_7/ไปต่อ.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page7_1" class="page page7_1">
           <div id="sm-page7_1" class="sm-page7_1">
             <div id="sm-page7_1-img1" class="sm-page7_1-img sm-page7_1-img1"></div>
-            <div id="sm-page7_1-img2" class="sm-page7_1-img sm-page7_1-img2"><img class="page7_1-img page7_1-img2"src="Frame_8/ย้อนกลับ.png"></div>
+            <div id="sm-page7_1-img2" class="sm-page7_1-img sm-page7_1-img2"><img class="page7_1-img page7_1-img2"onclick="myMove6()"src="Frame_8/ย้อนกลับ.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page7_2" class="page page7_2">
           <div id="sm-page7_2" class="sm-page7_2">
             <div id="sm-page7_2-img1" class="sm-page7_2-img sm-page7_2-img1"></div>
-            <div id="sm-page7_2-img2" class="sm-page7_2-img sm-page7_2-img2"><img class="page7_2-img page7_2-img2"src="Frame_8/ย้อนกลับ.png"></div>
+            <div id="sm-page7_2-img2" class="sm-page7_2-img sm-page7_2-img2"><img class="page7_2-img page7_2-img2"onclick="myMove6()"src="Frame_8/ย้อนกลับ.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page7_3" class="page page7_3">
           <div id="sm-page7_3" class="sm-page7_3">
             <div id="sm-page7_3-img1" class="sm-page7_3-img sm-page7_3-img1"></div>
-            <div id="sm-page7_3-img2" class="sm-page7_3-img sm-page7_3-img2"><img class="page7_3-img page7_3-img2"src="Frame_8/ย้อนกลับ.png"></div>
+            <div id="sm-page7_3-img2" class="sm-page7_3-img sm-page7_3-img2"><img class="page7_3-img page7_3-img2"onclick="myMove6()"src="Frame_8/ย้อนกลับ.png"></div>
           </div>
         </div>
       </section>
       <section>
-        <div id="page8" class="page page8">
+        <div id="page8" class="page page8" onclick="myMove8()">
           <div id="sm-page8" class="sm-page8">
             <div id="sm-page8-img1" class="sm-page8-img sm-page8-img1"><img class="page8-img page8-img1-1"src="Frame_9/HOMELESS_4.png"></div>
             <div id="sm-page8-img2" class="sm-page8-img sm-page8-img2"><img class="page8-img page8-img2-1"src="Frame_9/HOMELESS_5.png"></div>
             <div id="sm-page8-img3" class="sm-page8-img sm-page8-img3"><img class="page8-img page8-img3-1"src="Frame_9/HOMELESS_6.png">
-              <div id="sm-page8-img4" class="sm-page8-img sm-page8-img4"><img class="page8-img page8-img4-1"src="Frame_9/Text_8.png"></div>
+              <img class="page8-img page8-img4-1"src="Frame_9/Text_8.png">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page9" class="page page9">
           <div id="sm-page9" class="sm-page9">
             <div id="sm-page9-img1" class="sm-page9-img sm-page9-img1"><img class="page9-img page9-img1-1"src="Frame_10/HOMELESS_7.png">
-              <div id="sm-page9-img2" class="sm-page9-img sm-page9-img2"><img class="page9-img page9-img2-1"src="Frame_10/Text_9.png"></div>
+              <img class="page9-img page9-img2-1"src="Frame_10/Text_9.png">
             </div>
             <div id="sm-page9-img3" class="sm-page9-img sm-page9-img3"><img class="page9-img page9-img3-1"src="Frame_10/HOMELESS_8.png">
-              <div id="sm-page9-img4" class="sm-page9-img sm-page9-img4"><img class="page9-img page9-img4-1"src="Frame_10/Text_10.png"></div>
+              <img class="page9-img page9-img4-1"src="Frame_10/Text_10.png">
             </div>
             <div id="sm-page9-img5" class="sm-page9-img sm-page9-img5"><img class="page9-img page9-img5-1"src="Frame_10/HOMELESS_9.png"></div>
             <div id="sm-page9-img6" class="sm-page9-img sm-page9-img6"><img class="page9-img page9-img6-1"src="Frame_10/Text_11.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page10" class="page page10">
           <div id="sm-page10" class="sm-page10">
             <div id="sm-page10-img1" class="sm-page10-img sm-page10-img1"><img class="page10-img page10-img1-1"src="Frame_11/HOMELESS_10.png">
-              <div id="sm-page10-img6" class="sm-page10-img sm-page10-img6"><img class="page10-img page10-img6-1"src="Frame_11/Text_12.png"></div>
+              <img class="page10-img page10-img6-1"src="Frame_11/Text_12.png">
             </div>
             <div id="sm-page10-img2" class="sm-page10-img sm-page10-img2"><img class="page10-img page10-img2-1"src="Frame_11/HOMELESS_11.png"></div>
             <div id="sm-page10-img3" class="sm-page10-img sm-page10-img3"><img class="page10-img page10-img3-1"src="Frame_11/HOMELESS_12.png"></div>
             <div id="sm-page10-img4" class="sm-page10-img sm-page10-img4"><img class="page10-img page10-img4-1"src="Frame_11/HOMELESS_13.png"></div>
             <div id="sm-page10-img5" class="sm-page10-img sm-page10-img5"><img class="page10-img page10-img5-1"src="Frame_11/Text_13.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page11" class="page page11">
           <div id="sm-page11" class="sm-page11">
             <div id="sm-page11-img1" class="sm-page11-img sm-page11-img1"><img class="page11-img page11-img1-1"src="Frame_12/HOMELESS_14.png"></div>
             <div id="sm-page11-img2" class="sm-page11-img sm-page11-img2"><img class="page11-img page11-img2-1"src="Frame_12/HOMELESS_15.png">
-              <div id="sm-page11-img3" class="sm-page11-img sm-page11-img3"><img class="page11-img page11-img3-1"src="Frame_12/Text_14.png"></div>
+              <img class="page11-img page11-img3-1"src="Frame_12/Text_14.png">
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div id="page12" class="page page12">
+        <div id="page12" class="page page12" onclick="myMove9()">
           
         </div>
       </section>
       <section>
-        <div id="page13" class="page page13">
+        <div id="page13" class="page page13" onclick="myMove10()">
           
         </div>
       </section>
       <section>
-        <div id="page14" class="page page14">
+        <div id="page14" class="page page14" onclick="myMove11()">
           <div id="sm-page14" class="sm-page14">
             <div id="sm-page14-img1" class="sm-page14-img sm-page14-img1"><img class="page14-img page14-img1-1"src="Frame_15/HOMELESS_18.png"></div>
             <div id="sm-page14-img2" class="sm-page14-img sm-page14-img2"><img class="page14-img page14-img2-1"src="Frame_15/HOMELESS_19.png"></div>
             <div id="sm-page14-img3" class="sm-page14-img sm-page14-img3"><img class="page14-img page14-img3-1"src="Frame_15/HOMELESS_20.png">
-              <div id="sm-page14-img4" class="sm-page14-img sm-page14-img4"><img class="page14-img page14-img4-1"src="Frame_15/Text_15.png"></div>
+              <img class="page14-img page14-img4-1"src="Frame_15/Text_15.png">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page15" class="page page15">
           <div id="sm-page15" class="sm-page15">
             <div id="sm-page15-img1" class="sm-page15-img sm-page15-img1"><img class="page15-img page15-img1-1"src="Frame_16/ดินเนอร์.png"></div>
             <div id="sm-page15-img2" class="sm-page15-img sm-page15-img2">
-              <div id="sm-page15-img5" class="sm-page15-img sm-page15-img5"><img class="page15-img page15-img5-1"src="Frame_16/คลิก.png"></div>
-              <div id="sm-page15-img6" class="sm-page15-img sm-page15-img6"><img class="page15-img page15-img6-1"src="Frame_16/คลิก.png"></div>
-              <div id="sm-page15-img7" class="sm-page15-img sm-page15-img7"><img class="page15-img page15-img7-1"src="Frame_16/คลิก.png"></div>
+              <img class="page15-img page15-img5-1"src="Frame_16/คลิก.png" onclick="myMove15_1()">
+              <img class="page15-img page15-img6-1"src="Frame_16/คลิก.png" onclick="myMove15_2()">
+              <img class="page15-img page15-img7-1"src="Frame_16/คลิก.png" onclick="myMove15_3()">
             </div>
             <div id="sm-page15-img3" class="sm-page15-img sm-page15-img3"><img class="page15-img page15-img3-1"src="Frame_16/คำอธิบาย_ขยายไซส์.png"></div>
-            <div id="sm-page15-img4" class="sm-page15-img sm-page15-img4"><img class="page15-img page15-img4-1"src="Frame_16/ไปต่อ.png"></div>
+            <div id="sm-page15-img4" class="sm-page15-img sm-page15-img4"><img class="page15-img page15-img4-1"onclick="myMove17()"src="Frame_16/ไปต่อ.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page16_1" class="page page16_1">
           <div id="sm-page16-1" class="sm-page16-1">
             <div id="sm-page16-1-img1" class="sm-page16-1-img sm-page16-1-img1"><img class="page16-1-img page16-1-img1-1"src="Frame_17/HOMELESS_22.png"></div>
-            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"src="Frame_17/ย้อนกลับ.png"></div>
+            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"onclick="myMove16()"src="Frame_17/ย้อนกลับ.png"></div>
+          </div>
+          <div id="sm-page16-2" class="sm-page16-2">
+            <div id="sm-page16-2-img1" class="sm-page16-2-img sm-page16-2-img1"><img class="page16-2-img page16-2-img1-1"src="Frame_17/HOMELESS_23.png"></div>
+            <div id="sm-page16-2-img2" class="sm-page16-2-img sm-page16-2-img2"><img class="page16-2-img page16-2-img1-2"onclick="myMove16()"src="Frame_17/ย้อนกลับ.png"></div>
+          </div>
+          <div id="sm-page16-3" class="sm-page16-3">
+            <div id="sm-page16-3-img1" class="sm-page16-3-img sm-page16-3-img1"><img class="page16-3-img page16-3-img1-1"src="Frame_17/HOMELESS_24.png"></div>
+            <div id="sm-page16-3-img2" class="sm-page16-3-img sm-page16-3-img2"><img class="page16-3-img page16-3-img1-2"onclick="myMove16()"src="Frame_17/ย้อนกลับ.png"></div>
           </div>
         </div>
       </section>
       <section>
-        <div id="page16_2" class="page page16_2">
-          <div id="sm-page16-1" class="sm-page16-1">
-            <div id="sm-page16-1-img1" class="sm-page16-1-img sm-page16-1-img1"><img class="page16-1-img page16-2-img1-1"src="Frame_17/HOMELESS_23.png"></div>
-            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"src="Frame_17/ย้อนกลับ.png"></div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div id="page16_3" class="page page16_3">
-          <div id="sm-page16-1" class="sm-page16-1">
-            <div id="sm-page16-1-img1" class="sm-page16-1-img sm-page16-1-img1"><img class="page16-1-img page16-1-img1-1"src="Frame_17/HOMELESS_24.png"></div>
-            <div id="sm-page16-1-img2" class="sm-page16-1-img sm-page16-1-img2"><img class="page16-1-img page16-1-img1-2"src="Frame_17/ย้อนกลับ.png"></div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div id="page17" class="page page17">
-          
-        </div>
-      </section>
-      <section>
-        <div id="page18" class="page page18">
+        <div id="page17" class="page page17" onclick="myMove18()">
           <div id="sm-page18" class="sm-page18">
             <div id="sm-page18-img1" class="sm-page18-img sm-page18-img1"><img class="page18-img page18-img1-1"src="Frame_18-26/HOMELESS_25.GIF"></div>
-            <div class="right-col">
-              <p>click here to play 1</p>
-              <img src = "play.png" id = "icon1">
-            </div>
-            
-            <audio id = "mySound1">
-              <source src="storm.mp3" type="audio/mp3">
-            </audio>
-            
-            <script>
-              var mySound1 = document.getElementById("mySound1");
-              var icon = document.getElementById("icon1");
-            
-              icon1.onclick = function(){
-                if(mySound1.paused){
-                  mySound1.play();
-                  icon1.src = "pause.png";
-                }else{
-                  mySound1.pause();
-                  icon1.src = "play.png";
-                }
-              }
-            </script>
-            <div id="sm-page18-txt" class="sm-page18-img sm-page18-txt">ฝนตกแล้วน้า ทำไงดี<br>- พี่ชาติ -</div>
+            <div id="sm-page18-txt" class="sm-page18-img sm-page18-txt">"ฝนตกแล้วน้า ทำไงดี"<br>- พี่ชาติ -</div>
             <div id="sm-page18-img2" class="sm-page18-img sm-page18-img2"><img class="page18-img page18-img2-1"src="Frame_18-26/HOMELESS_25.GIF"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page19" class="page page19">
           <div id="sm-page19" class="sm-page19">
             <div id="sm-page19-img1" class="sm-page19-img sm-page19-img1"><img class="page19-img page19-img1-1"src="Frame_18-26/HOMELESS_26.GIF"></div>
-            <div class="right-col">
-              <p>click here to play 2</p>
-              <img src = "play.png" id = "icon2">
-            </div>
-            
-            <audio id = "mySound2">
-              <source src="walk.mp3" type="audio/mp3">
-            </audio>
-            
-            <script>
-              var mySound2 = document.getElementById("mySound2");
-              var icon = document.getElementById("icon2");
-            
-              icon2.onclick = function(){
-                if(mySound2.paused){
-                  mySound2.play();
-                  icon2.src = "pause.png";
-                }else{
-                  mySound2.pause();
-                  icon2.src = "play.png";
-                }
-              }
-            </script>
-            <div id="sm-page19-txt" class="sm-page19-img sm-page19-txt">วิ่งดิ!! รอไร<br>- น้าเขียว -</div>
+            <div id="sm-page19-txt" class="sm-page19-img sm-page19-txt">"วิ่งดิ!! รอไร"<br>- น้าเขียว -</div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page20" class="page page20">
-          <div id="sm-page19" class="sm-page19">
-            <div id="sm-page19-txt" class="sm-page19-img sm-page19-txt">เทศกิจมาแล้วพี่ รีบเลย<br>- พี่เชอร์รี่ -</div>
-            <div id="sm-page19-img1" class="sm-page19-img sm-page19-img1"><img class="page19-img page19-img1-1"src="Frame_18-26/HOMELESS_27.GIF"></div>
-            <div class="right-col">
-              <p>click here to play 3</p>
-              <img src = "play.png" id = "icon3">
-              </div>
-              
-              <audio id = "mySound3">
-              <source src="whistle.mp3" type="audio/mp3">
-              </audio>
-              
-              <script>
-              var mySound3 = document.getElementById("mySound3");
-              var icon = document.getElementById("icon3");
-              
-              icon3.onclick = function(){
-              if(mySound3.paused){
-                mySound3.play();
-                icon3.src = "pause.png";
-              }else{
-                mySound3.pause();
-                icon3.src = "play.png";
-              }
-              }
-              </script>
+          <div id="sm-page20" class="sm-page20">
+            <div id="sm-page20-txt" class="sm-page20-img sm-page20-txt">"เทศกิจมาแล้วพี่ รีบเลย"<br>- พี่เชอร์รี่ -</div>
+            <div id="sm-page20-img1" class="sm-page20-img sm-page20-img1"><img class="page20-img page20-img1-1"src="Frame_18-26/HOMELESS_27.GIF"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page21" class="page page21">
           <div id="sm-page21" class="sm-page21">
-            <div id="sm-page21-txt" class="sm-page21-img sm-page21-txt">โคตรสกปรกเลยว่ะ มาอยู่ได้ทุกวัน<br>- ชาวบ้าน 1 -</div>
+            <div id="sm-page21-txt" class="sm-page21-img sm-page21-txt">"โคตรสกปรกเลยว่ะ มาอยู่ได้ทุกวัน"<br>- ชาวบ้าน 1 -</div>
             <div id="sm-page21-img1" class="sm-page21-img sm-page21-img1"><img class="page21-img page21-img1-1"src="Frame_18-26/HOMELESS_28.GIF"></div>
-            <div id="container" class="container">
-     
-              <div class="right-col">
-              <p>click here to play 4</p>
-              <img src = "play.png" id = "icon4">
-              </div>
-              
-              <audio id = "mySound4">
-              <source src="crowd.mp3" type="audio/mp3">
-              </audio>
-              
-              <script>
-              var mySound4 = document.getElementById("mySound4");
-              var icon = document.getElementById("icon4");
-              
-              icon4.onclick = function(){
-              if(mySound4.paused){
-                mySound4.play();
-                icon4.src = "pause.png";
-              }else{
-                mySound4.pause();
-                icon4.src = "play.png";
-              }
-              }
-              </script>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page22" class="page page22">
           <div id="sm-page22" class="sm-page22">
-            <div id="sm-page22-txt" class="sm-page22-img sm-page22-txt">เหม็น! ออกจากร้านไปเลยนะ<br>- ชาวบ้าน 2 -</div>
-            <div class="right-col">
-              <p>click here to play 5</p>
-              <img src = "play.png" id = "icon5">
-              </div>
-              
-              <audio id = "mySound5">
-              <source src="throw.mp3" type="audio/mp3">
-              </audio>
-              
-              <script>
-              var mySound5 = document.getElementById("mySound5");
-              var icon = document.getElementById("icon5");
-              
-              icon5.onclick = function(){
-              if(mySound5.paused){
-                mySound5.play();
-                icon5.src = "pause.png";
-              }else{
-                mySound5.pause();
-                icon5.src = "play.png";
-              }
-              }
-              </script>
-            <div id="sm-page22-img1" class="sm-page22-img sm-page22-img1"><img class="page22-img page22-img1-1"src="Frame_18-26/HOMELESS_29.GIF"></div>
+            <div id="sm-page22-txt" class="sm-page22-img sm-page22-txt">"เหม็น! ออกจากร้านไปเลยนะ"<br>- ชาวบ้าน 2 -</div>
+            <div id="sm-page22-img1" class="sm-page22-img sm-page22-img1"><img class="page22-img page21-img1-1"src="Frame_18-26/HOMELESS_29.GIF"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page23" class="page page23">
-          <div id="sm-page18" class="sm-page18">
+          <div id="sm-page23" class="sm-page23">
             <div id="sm-page23-img1" class="sm-page23-img sm-page23-img1"><img class="page23-img page23-img1-1"src="Frame_18-26/HOMELESS_30.GIF"></div>
-            <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">ยังไม่อาบน้ำก็สาดใส่เลย ฮ่า ๆ<br>- ชาวบ้าน 3 -</div>
-            <div class="right-col">
-              <p>click here to play 6</p>
-              <img src = "play.png" id = "icon6">
-              </div>
-              
-              <audio id = "mySound6">
-              <source src="splash.mp3" type="audio/mp3">
-              </audio>
-              
-              <script>
-              var mySound6 = document.getElementById("mySound6");
-              var icon = document.getElementById("icon6");
-              
-              icon6.onclick = function(){
-              if(mySound6.paused){
-                mySound6.play();
-                icon6.src = "pause.png";
-              }else{
-                mySound6.pause();
-                icon6.src = "play.png";
-              }
-              }
-              </script>
+            <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">"ยังไม่อาบน้ำก็สาดใส่เลย ฮ่าๆ"<br>- ชาวบ้าน 3 -</div>
             <div id="sm-page23-img2" class="sm-page23-img sm-page23-img2"><img class="page23-img page23-img2-1"src="Frame_18-26/HOMELESS_31.GIF"></div>
           </div>
+          <div id="sm-page24-txt" class="sm-page24-img sm-page24-txt">....<br><br><br>ในที่สุดฝนก็หยุดตกสักที<br><br><br>"แฮ่กๆ"<br>"เหนื่อยโว้ย"<br>"เอาหน่า ถือว่าออกกำลังกาย"</div>
+          <div id="sm-page25-txt" class="sm-page25-img sm-page25-txt">"เหรียญก็มีสองด้าน มีคนดี ก็ต้องมีคนไม่ดี<br>ไม่แปลกหรอกที่พวกเขาจะรังเกียจเรา<br>เพราะความไม่มีนี่แหละ ทำให้เราต้องดิ้นรน"<br><br><br>"บ้างก็ลักขโมย บ้างก็เก็บขวดขาย<br>บ้างก็ใช้ร่างกาย เหมือนเป็นหมาล่าเนื้อ<br>อยู่รอดไปวัน ๆ"<br><br><br>- พี่เชอร์รี่ -</div>
         </div>
       </section>
       <section>
-        <div id="page24" class="page page24">
-          <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">....<br><br><br>ในที่สุดฝนก็หยุดตกสักที<br><br><br>"แฮ่กๆ"<br>"เหนื่อยโว้ย"<br>"เอาหน่า ถือว่าออกกำลังกาย"</div>
-        </div>
-      </section>
-      <section>
-        <div id="page25" class="page page25">
-          <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">"เหรียญก็มีสองด้าน มีคนดี ก็ต้องมีคนไม่ดี<br>ไม่แปลกหรอกที่พวกเขาจะรังเกียจเรา<br>เพราะความไม่มีนี่แหละ ทำให้เราต้องดิ้นรน"<br><br><br>"บ้างก็ลักขโมย บ้างก็เก็บขวดขาย<br>บ้างก็ใช้ร่างกาย เหมือนเป็นหมาล่าเนื้อ<br>อยู่รอดไปวัน ๆ"<br><br><br>- พี่เชอร์รี่ -</div>
-        </div>
-      </section>
-      <section>
-        <div id="page26" class="page page26">
+        <div id="page26" class="page page26" onclick="myMove19()">
           <div id="sm-page26" class="sm-page26">
             <div id="sm-page26-img1" class="sm-page26-img sm-page26-img1"><img class="page26-img page26-img1-1"src="Frame_27/HOMELESS_32.png">
-              <div id="sm-page26-img4" class="sm-page26-img sm-page26-img4"><img class="page26-img page26-img4-1"src="Frame_27/Text_16.png"></div>
+              <img class="page26-img page26-img4-1"src="Frame_27/Text_16.png">
             </div>
             <div id="sm-page26-img2" class="sm-page26-img sm-page26-img2"><img class="page26-img page26-img2-1"src="Frame_27/HOMELESS_33.png">
-              <div id="sm-page26-img5" class="sm-page26-img sm-page26-img5"><img class="page26-img page26-img5-1"src="Frame_27/Text_17.png"></div>
+              <img class="page26-img page26-img5-1"src="Frame_27/Text_17.png">
             </div>
             <div id="sm-page26-img3" class="sm-page26-img sm-page26-img3"><img class="page26-img page26-img3-1"src="Frame_27/HOMELESS_34.png">
-              <div id="sm-page26-img6" class="sm-page26-img sm-page26-img6"><img class="page26-img page26-img6-1"src="Frame_27/Text_18.png"></div>
+              <img class="page26-img page26-img6-1"src="Frame_27/Text_18.png">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page27" class="page page27">
           <div id="sm-page27-img1" class="sm-page27-img sm-page27-img1"><img class="page27-img page27-img1-1"src="Frame_28/HOMELESS_35.png"></div>
-        </div>
-      </section>
-      <section>
-        <div id="page28" class="page page28">
           <div id="sm-page28" class="sm-page28">
             <div id="sm-page28-txt" class="sm-page28-img sm-page28-txt">ท้ายที่สุดแล้วชีวิตก็ต้องดำเนินต่อไป<br>พวกคุณคงรู้แล้วว่าเราต้องผ่านอะไรกันมาบ้าง<br><br>หลายคนมักจะถามผมเสมอว่า<br>
               ช่วยเหลืออะไรได้บ้าง<br>
@@ -2490,14 +2206,10 @@
               </div>
             <div id="sm-page28-img1" class="sm-page28-img sm-page28-img1"><img class="page28-img page28-img1-1"src="Frame_29/HOMELESS_36.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page29" class="page page29">
           <div id="sm-page29" class="sm-page29">
             <div id="sm-page29-img1" class="sm-page29-img sm-page29-img1"><img class="page29-img page29-img1-1"src="Frame_30/HOMELESS_37.png"></div>
             <div id="sm-page29-txt" class="sm-page29-img sm-page29-txt">ช่องทางการติดต่อ<br>สายด่วน: 1800<br>ศูนย์คนไร้บ้าน โทร 083-932-8389<br>Email: Homelessknow@gmail.com</div>
-            <div id="sm-page29-img2" class="sm-page29-img sm-page29-img2"><img class="page29-img page29-img2-1"src="Frame_30/ย้อนกลับ.png"></div>
+            <div id="sm-page29-img2" class="sm-page29-img sm-page29-img2"><img class="page29-img page29-img2-1"src="Frame_30/ย้อนกลับ.png" onclick="window.location.reload();"></div>
           </div>
         </div>
       </section>
@@ -2518,17 +2230,13 @@
             <div id="sm-page2-img3_mobi" class="sm-page2-img_mobi sm-page2-img3_mobi"><img class="page2-img_mobi page2-img3_mobi"src="Frame_3/text_2_phone.png"></div>
             <div id="sm-page2-img4_mobi" class="sm-page2-img_mobi sm-page2-img4_mobi"><img class="page2-img_mobi page2-img4_mobi"src="Frame_3/text_4_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page3_mobi" class="page page3_mobi">
           <div id="sm-page3_mobi" class="sm-page3_mobi">
             <div id="sm-page3-img1_mobi" class="sm-page3-img_mobi sm-page3-img1_mobi"><img class="page3-img_mobi page3-img1_mobi"src="Frame_4/Homeless_2_phone.png">
               <div id="sm-page3-img2_mobi" class="sm-page3-img_mobi sm-page3-img2_mobi"><img class="page3-img_mobi page3-img2_mobi"src="Frame_4/Text_5_phone.png"></div>
               <div id="sm-page3-img3_mobi" class="sm-page3-img_mobi sm-page3-img3_mobi"><img class="page3-img_mobi page3-img3_mobi"src="Frame_4/Text_6_phone.png"></div>
             </div>
             <div id="sm-page3-img4_mobi" class="sm-page3-img_mobi sm-page3-img4_mobi"><img class="page3-img_mobi page3-img4_mobi"src="Frame_4/newspaper_phone.png"></div>
-            <div id="sm-page3-img5_mobi" class="sm-page3-img_mobi sm-page3-img5_mobi"><img class="page3-img_mobi page3-img5_mobi"src="Frame_4/อ่านต่อ_phone.png"></div>
+            <div id="sm-page3-img5_mobi" class="sm-page3-img_mobi sm-page3-img5_mobi"><img class="page3-img_mobi page3-img5_mobi"onclick="myMove3_mobi()"src="Frame_4/อ่านต่อ_phone.png"></div>
           </div>
         </div>
       </section>
@@ -2536,66 +2244,46 @@
         <div id="page4_mobi" class="page page4_mobi">
           <div id="sm-page4_mobi" class="sm-page4_mobi">
             <div id="sm-page4-img1_mobi" class="sm-page4-img_mobi sm-page4-img1_mobi"><img class="page4-img_mobi page4-img1_mobi"src="Frame_5/Newspaper_2_phone.png"></div>
-            <div id="sm-page4-img2_mobi" class="sm-page4-img_mobi sm-page4-img2_mobi"><img class="page4-img_mobi page4-img2_mobi"src="Frame_5/พลิกหน้าถัดไป_phone.png"></div>
+            <div id="sm-page4-img2_mobi" class="sm-page4-img_mobi sm-page4-img2_mobi"><img class="page4-img_mobi page4-img2_mobi"onclick="myMove4_mobi()"src="Frame_5/พลิกหน้าถัดไป_phone.png"></div>
           </div>
         </div>
       </section>
       <section>
         <div id="page5_mobi" class="page page5_mobi">
-          <div id="sm-page5_mobi" class="sm-page5_mobi">
+          <div id="sm-page5_mobi" class="sm-page5_mobi" onclick="myMove5_mobi()">
             <div id="sm-page5-img1_mobi" class="sm-page5-img_mobi sm-page5-img1_mobi"><img class="page5-img_mobi page5-img1_mobi"src="Frame_6/Homeless_3_phone.png"></div>
             <div id="sm-page5-img2_mobi" class="sm-page5-img_mobi sm-page5-img2_mobi"><img class="page5-img_mobi page5-img2_mobi"src="Frame_6/Text_7_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page6_mobi" class="page page6_mobi">
           <div id="sm-page6_mobi" class="sm-page6_mobi">
             <div id="sm-page6-img1_mobi" class="sm-page6-img_mobi sm-page6-img1_mobi">
-              <div id="sm-page6-img1-1_mobi" class="sm-page6-img_mobi sm-page6-img1-1_mobi"><img class="page6-img_mobi page6-img1-1_mobi"src="Frame_7/Name_1_phone.png"></div>
-              <div id="sm-page6-img2-2_mobi" class="sm-page6-img_mobi sm-page6-img2-2_mobi"><img class="page6-img_mobi page6-img2-2_mobi"src="Frame_7/Name_2_phone.png"></div>
-              <div id="sm-page6-img3-3_mobi" class="sm-page6-img_mobi sm-page6-img3-3_mobi"><img class="page6-img_mobi page6-img3-3_mobi"src="Frame_7/Name_3_phone.png"></div>
+              <div id="sm-page6-img1-1_mobi" class="sm-page6-img_mobi sm-page6-img1-1_mobi"><img class="page6-img_mobi page6-img1-1_mobi"onclick="myMove5_1_mobi()"src="Frame_7/Name_1_phone.png"></div>
+              <div id="sm-page6-img2-2_mobi" class="sm-page6-img_mobi sm-page6-img2-2_mobi"><img class="page6-img_mobi page6-img2-2_mobi"onclick="myMove5_2_mobi()"src="Frame_7/Name_2_phone.png"></div>
+              <div id="sm-page6-img3-3_mobi" class="sm-page6-img_mobi sm-page6-img3-3_mobi"><img class="page6-img_mobi page6-img3-3_mobi"onclick="myMove5_3_mobi()"src="Frame_7/Name_3_phone.png"></div>
             </div>
-            <div id="sm-page6-img2_mobi" class="sm-page6-img_mobi sm-page6-img2_mobi"><img class="page6-img_mobi page6-img2_mobi"src="Frame_7/ไปต่อ_phone.png"></div>
+            <div id="sm-page6-img2_mobi" class="sm-page6-img_mobi sm-page6-img2_mobi"><img class="page6-img_mobi page6-img2_mobi"onclick="myMove7_mobi()"src="Frame_7/ไปต่อ_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page7_1_mobi" class="page page7_1_mobi">
           <div id="sm-page7_1_mobi" class="sm-page7_1_mobi">
             <div id="sm-page7_1-img1_mobi" class="sm-page7_1-img_mobi sm-page7_1-img1_mobi"></div>
-            <div id="sm-page7_1-img2_mobi" class="sm-page7_1-img_mobi sm-page7_1-img2_mobi"><img class="page7_1-img_mobi page7_1-img2_mobi"src="Frame_8/ย้อนกลับ_phone.png"></div>
+            <div id="sm-page7_1-img2_mobi" class="sm-page7_1-img_mobi sm-page7_1-img2_mobi"><img class="page7_1-img_mobi page7_1-img2_mobi"onclick="myMove6_mobi()"src="Frame_8/ย้อนกลับ_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page7_2_mobi" class="page page7_2_mobi">
           <div id="sm-page7_2_mobi" class="sm-page7_2_mobi">
             <div id="sm-page7_2-img1_mobi" class="sm-page7_2-img_mobi sm-page7_2-img1_mobi"></div>
-            <div id="sm-page7_2-img2_mobi" class="sm-page7_2-img_mobi sm-page7_2-img2_mobi"><img class="page7_2-img_mobi page7_2-img2_mobi"src="Frame_8/ย้อนกลับ_phone.png"></div>
+            <div id="sm-page7_2-img2_mobi" class="sm-page7_2-img_mobi sm-page7_2-img2_mobi"><img class="page7_2-img_mobi page7_2-img2_mobi"onclick="myMove6_mobi()"src="Frame_8/ย้อนกลับ_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page7_3_mobi" class="page page7_3_mobi">
           <div id="sm-page7_3_mobi" class="sm-page7_3_mobi">
             <div id="sm-page7_3-img1_mobi" class="sm-page7_3-img_mobi sm-page7_3-img1_mobi"></div>
-            <div id="sm-page7_3-img2_mobi" class="sm-page7_3-img_mobi sm-page7_3-img2_mobi"><img class="page7_3-img_mobi page7_3-img2_mobi"src="Frame_8/ย้อนกลับ_phone.png"></div>
+            <div id="sm-page7_3-img2_mobi" class="sm-page7_3-img_mobi sm-page7_3-img2_mobi"><img class="page7_3-img_mobi page7_3-img2_mobi"onclick="myMove6_mobi()"src="Frame_8/ย้อนกลับ_phone.png"></div>
           </div>
         </div>
       </section>
       <section>
-        <div id="page8_mobi" class="page page8_mobi">
+        <div id="page8_mobi" class="page page8_mobi" onclick="myMove8_mobi()">
           <div id="sm-page8_mobi" class="sm-page8_mobi">
             <div id="sm-page8-img1_mobi" class="sm-page8-img_mobi sm-page8-img1_mobi"><img class="page8-img_mobi page8-img1-1_mobi"src="Frame_9/Homeless_4_phone.png"></div>
             <div id="sm-page8-img2_mobi" class="sm-page8-img_mobi sm-page8-img2_mobi"><img class="page8-img_mobi page8-img2-1_mobi"src="Frame_9/Homeless_5_phone.png"></div>
             <div id="sm-page8-img3_mobi" class="sm-page8-img_mobi sm-page8-img3_mobi"><img class="page8-img_mobi page8-img3-1_mobi"src="Frame_9/Text_8_phone.png"></div>
             <div id="sm-page8-img4_mobi" class="sm-page8-img_mobi sm-page8-img4_mobi"><img class="page8-img_mobi page8-img4-1_mobi"src="Frame_9/Homeless_6_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page9_mobi" class="page page9_mobi">
           <div id="sm-page9_mobi" class="sm-page9_mobi">
             <div id="sm-page9-img1_mobi" class="sm-page9-img_mobi sm-page9-img1_mobi"><img class="page9-img_mobi page9-img1-1_mobi"src="Frame_10/Homeless_7_phone.png">
               <div id="sm-page9-img5_mobi" class="sm-page9-img_mobi sm-page9-img5_mobi"><img class="page9-img_mobi page9-img5-1_mobi"src="Frame_10/Text_9_phone.png"></div>
@@ -2606,10 +2294,6 @@
             <div id="sm-page9-img3_mobi" class="sm-page9-img_mobi sm-page9-img3_mobi"><img class="page9-img_mobi page9-img3-1_mobi"src="Frame_10/Homeless_9_phone.png"></div>
             <div id="sm-page9-img4_mobi" class="sm-page9-img_mobi sm-page9-img4_mobi"><img class="page9-img_mobi page9-img4-1_mobi"src="Frame_10/Text_11_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page10_mobi" class="page page10_mobi">
           <div id="sm-page10_mobi" class="sm-page10_mobi">
             <div id="sm-page10-img1_mobi" class="sm-page10-img_mobi sm-page10-img1_mobi"><img class="page10-img_mobi page10-img1-1_mobi"src="Frame_11/Homeless_10_phone.png">
               <div id="sm-page10-img5_mobi" class="sm-page10-img_mobi sm-page10-img5_mobi"><img class="page10-img_mobi page10-img5-1_mobi"src="Frame_11/Text_12_phone.png"></div>
@@ -2620,10 +2304,6 @@
               <div id="sm-page10-img6_mobi" class="sm-page10-img_mobi sm-page10-img6_mobi"><img class="page10-img_mobi page10-img6-1_mobi"src="Frame_11/Text_13_phone.png"></div>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page11_mobi" class="page page11_mobi">
           <div id="sm-page11_mobi" class="sm-page11_mobi">
             <div id="sm-page11-img1_mobi" class="sm-page11-img_mobi sm-page11-img1_mobi"><img class="page11-img_mobi page11-img1-1_mobi"src="Frame_12/Homeless_14_phone.png"></div>
             <div id="sm-page11-img2_mobi" class="sm-page11-img_mobi sm-page11-img2_mobi"><img class="page11-img_mobi page11-img2-1_mobi"src="Frame_12/text_14_phone.png"></div>
@@ -2632,157 +2312,105 @@
         </div>
       </section>
       <section>
-        <div id="page12_mobi" class="page page12_mobi">
+        <div id="page12_mobi" class="page page12_mobi" onclick="myMove9_mobi()">
           
         </div>
       </section>
       <section>
-        <div id="page13_mobi" class="page page13_mobi">
+        <div id="page13_mobi" class="page page13_mobi" onclick="myMove10_mobi()">
           
         </div>
       </section>
       <section>
-        <div id="page14_mobi" class="page page14_mobi">
+        <div id="page14_mobi" class="page page14_mobi" onclick="myMove11_mobi()">
           <div id="sm-page14_mobi" class="sm-page14_mobi">
             <div id="sm-page14-img1_mobi" class="sm-page14-img_mobi sm-page14-img1_mobi"><img class="page14-img_mobi page14-img1-1_mobi"src="Frame_15/Homeless_18_phone.png"></div>
             <div id="sm-page14-img2_mobi" class="sm-page14-img_mobi sm-page14-img2_mobi"><img class="page14-img_mobi page14-img2-1_mobi"src="Frame_15/homeless_19_phone.png"></div>
             <div id="sm-page14-img3_mobi" class="sm-page14-img_mobi sm-page14-img3_mobi"><img class="page14-img_mobi page14-img3-1_mobi"src="Frame_15/Text_15_phone.png"></div>
             <div id="sm-page14-img4_mobi" class="sm-page14-img_mobi sm-page14-img4_mobi"><img class="page14-img_mobi page14-img4-1_mobi"src="Frame_15/Homeless_20_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page15_mobi" class="page page15_mobi">
           <div id="sm-page15_mobi" class="sm-page15_mobi">
             <div id="sm-page15-img1_mobi" class="sm-page15-img_mobi sm-page15-img1_mobi"><img class="page15-img_mobi page15-img1-1_mobi"src="Frame_16/ดินเนอร์_phone.png"></div>
             <div id="sm-page15-img2_mobi" class="sm-page15-img_mobi sm-page15-img2_mobi">
-              <div id="sm-page15-img5_mobi" class="sm-page15-img_mobi sm-page15-img5_mobi"><img class="page15-img_mobi page15-img5-1_mobi"src="Frame_16/คลิก_phone.png"></div>
-              <div id="sm-page15-img6_mobi" class="sm-page15-img_mobi sm-page15-img6_mobi"><img class="page15-img_mobi page15-img6-1_mobi"src="Frame_16/คลิก_phone.png"></div>
-              <div id="sm-page15-img7_mobi" class="sm-page15-img_mobi sm-page15-img7_mobi"><img class="page15-img_mobi page15-img7-1_mobi"src="Frame_16/คลิก_phone.png"></div>
+              <div id="sm-page15-img5_mobi" class="sm-page15-img_mobi sm-page15-img5_mobi"><img class="page15-img_mobi page15-img5-1_mobi"onclick="myMove15_1_mobi()"src="Frame_16/คลิก_phone.png"></div>
+              <div id="sm-page15-img6_mobi" class="sm-page15-img_mobi sm-page15-img6_mobi"><img class="page15-img_mobi page15-img6-1_mobi"onclick="myMove15_2_mobi()"src="Frame_16/คลิก_phone.png"></div>
+              <div id="sm-page15-img7_mobi" class="sm-page15-img_mobi sm-page15-img7_mobi"><img class="page15-img_mobi page15-img7-1_mobi"onclick="myMove15_3_mobi()"src="Frame_16/คลิก_phone.png"></div>
             </div>
             <div id="sm-page15-img3_mobi" class="sm-page15-img_mobi sm-page15-img3_mobi"><img class="page15-img_mobi page15-img3-1_mobi"src="Frame_16/คำอธิบาย_phone.png"></div>
-            <div id="sm-page15-img4_mobi" class="sm-page15-img_mobi sm-page15-img4_mobi"><img class="page15-img_mobi page15-img4-1_mobi"src="Frame_16/ไปต่อ_phone.png"></div>
+            <div id="sm-page15-img4_mobi" class="sm-page15-img_mobi sm-page15-img4_mobi"><img class="page15-img_mobi page15-img4-1_mobi"onclick="myMove17_mobi()"src="Frame_16/ไปต่อ_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page16_1_mobi" class="page page16_1_mobi">
           <div id="sm-page16_1_mobi" class="sm-page16_1_mobi">
             <div id="sm-page16_1-img1_mobi" class="sm-page16_1-img_mobi sm-page16_1-img1_mobi"></div>
-            <div id="sm-page16_1-img2_mobi" class="sm-page16_1-img_mobi sm-page16_1-img2_mobi"><img class="page16_1-img_mobi page16_1-img2_mobi"src="Frame_17/ย้อนกลับ_phone.png"></div>
+            <div id="sm-page16_1-img2_mobi" class="sm-page16_1-img_mobi sm-page16_1-img2_mobi"><img class="page16_1-img_mobi page16_1-img2_mobi"onclick="myMove16_mobi()"src="Frame_17/ย้อนกลับ_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page16_2_mobi" class="page page16_2_mobi">
           <div id="sm-page16_2_mobi" class="sm-page16_2_mobi">
             <div id="sm-page16_2-img1_mobi" class="sm-page16_2-img_mobi sm-page16_2-img1_mobi"></div>
-            <div id="sm-page16_2-img2_mobi" class="sm-page16_2-img_mobi sm-page16_2-img2_mobi"><img class="page16_2-img_mobi page16_2-img2_mobi"src="Frame_17/ย้อนกลับ_phone.png"></div>
+            <div id="sm-page16_2-img2_mobi" class="sm-page16_2-img_mobi sm-page16_2-img2_mobi"><img class="page16_2-img_mobi page16_2-img2_mobi"onclick="myMove16_mobi()"src="Frame_17/ย้อนกลับ_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page16_3_mobi" class="page page16_3_mobi">
           <div id="sm-page16_3_mobi" class="sm-page16_3_mobi">
             <div id="sm-page16_3-img1_mobi" class="sm-page16_3-img_mobi sm-page16_3-img1_mobi"></div>
-            <div id="sm-page16_3-img2_mobi" class="sm-page16_3-img_mobi sm-page16_3-img2_mobi"><img class="page16_3-img_mobi page16_3-img2_mobi"src="Frame_17/ย้อนกลับ_phone.png"></div>
+            <div id="sm-page16_3-img2_mobi" class="sm-page16_3-img_mobi sm-page16_3-img2_mobi"><img class="page16_3-img_mobi page16_3-img2_mobi"onclick="myMove16_mobi()"src="Frame_17/ย้อนกลับ_phone.png"></div>
           </div>
         </div>
       </section>
       <section>
-        <div id="page17_mobi" class="page page17_mobi">
-          
-        </div>
-      </section>
-      <section>
-        
-        <div id="page18_mobi" class="page page18_mobi">
+        <div id="page17_mobi" class="page page17_mobi" onclick="myMove18_mobi()">
           <div id="sm-page18_mobi" class="sm-page18_mobi">
             <div id="sm-page18-img1_mobi" class="sm-page18-img_mobi sm-page18-img1_mobi">
               <img class="page18-img_mobi page18-img1_mobi"src="Frame_18-26/HOMELESS_25.GIF">
             </div>
-            <div id="sm-page18-img2_mobi" class="sm-page18-img_mobi sm-page18-img2_mobi">ฝนตกแล้วน้า ทำไงดี<br>- พี่ชาติ -</div>
-            
+            <div id="sm-page18-img2_mobi" class="sm-page18-img_mobi sm-page18-img2_mobi">"ฝนตกแล้วน้า ทำไงดี"<br>- พี่ชาติ -</div>
             <div id="sm-page18-img3_mobi" class="sm-page18-img_mobi sm-page18-img3_mobi">
               <img class="page18-img_mobi page18-img3_mobi"src="Frame_18-26/HOMELESS_25.GIF">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page19_mobi" class="page page19_mobi">
           <div id="sm-page19_mobi" class="sm-page19_mobi">
             <div id="sm-page19-img1_mobi" class="sm-page19-img_mobi sm-page19-img1_mobi">
-              วิ่งดิ!! รอไร<br>- น้าเขียว -
+              "วิ่งดิ!! รอไร"<br>- น้าเขียว -
             </div>
             <div id="sm-page19-img2_mobi" class="sm-page19-img_mobi sm-page19-img2_mobi">
               <img class="page19-img_mobi page19-img2_mobi"src="Frame_18-26/HOMELESS_26.GIF">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page20_mobi" class="page page20_mobi">
           <div id="sm-page20_mobi" class="sm-page20_mobi">
             <div id="sm-page20-img2_mobi" class="sm-page20-img_mobi sm-page20-img2_mobi">
               <img class="page20-img_mobi page20-img2_mobi"src="Frame_18-26/HOMELESS_27.GIF">
             </div>
-            
             <div id="sm-page20-img1_mobi" class="sm-page20-img_mobi sm-page20-img1_mobi">
-              เทศกิจมาแล้วพี่ รีบเลย<br>- พี่เชอร์รี่ -
+              "เทศกิจมาแล้วพี่ รีบเลย"<br>- พี่เชอร์รี่ -
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page21_mobi" class="page page21_mobi">
           <div id="sm-page21_mobi" class="sm-page21_mobi">
             <div id="sm-page21-img1_mobi" class="sm-page21-img_mobi sm-page21-img1_mobi">
-              โคตรสกปรกเลยว่ะ มาอยู่ได้ทุกวัน<br>- ชาวบ้าน 1 -
+              "โคตรสกปรกเลยว่ะ มาอยู่ได้ทุกวัน"<br>- ชาวบ้าน 1 -
             </div>
             <div id="sm-page21-img2_mobi" class="sm-page21-img_mobi sm-page21-img2_mobi">
               <img class="page21-img_mobi page21-img2_mobi"src="Frame_18-26/HOMELESS_28.GIF">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page22_mobi" class="page page22_mobi">
           <div id="sm-page22_mobi" class="sm-page22_mobi">
             <div id="sm-page22-img1_mobi" class="sm-page22-img_mobi sm-page22-img1_mobi">
-              เหม็น! ออกจากร้านไปเลยนะ<br>- ชาวบ้าน 2 -
+              "เหม็น! ออกจากร้านไปเลยนะ"<br>- ชาวบ้าน 2 -
             </div>
             <div id="sm-page22-img2_mobi" class="sm-page22-img_mobi sm-page22-img2_mobi">
               <img class="page22-img_mobi page22-img2_mobi"src="Frame_18-26/HOMELESS_29.GIF">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page23_mobi" class="page page23_mobi">
           <div id="sm-page23_mobi" class="sm-page23_mobi">
             <div id="sm-page23-img1_mobi" class="sm-page23-img_mobi sm-page23-img1_mobi">
               <img class="page23-img_mobi page23-img1_mobi"src="Frame_18-26/HOMELESS_30.GIF">
             </div>
-            <div id="sm-page23-img2_mobi" class="sm-page23-img_mobi sm-page23-img2_mobi">ยังไม่อาบน้ำก็สาดใส่เลย ฮ่าๆ<br>- ชาวบ้าน 3 -</div>
+            <div id="sm-page23-img2_mobi" class="sm-page23-img_mobi sm-page23-img2_mobi">"ยังไม่อาบน้ำก็สาดใส่เลย ฮ่าๆ"<br>- ชาวบ้าน 3 -</div>
             <div id="sm-page23-img3_mobi" class="sm-page23-img_mobi sm-page23-img3_mobi">
               <img class="page23-img_mobi page23-img3_mobi"src="Frame_18-26/HOMELESS_31.GIF">
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page24_mobi" class="page page24_mobi">
           <div id="sm-page24-txt_mobi" class="sm-page24-img_mobi sm-page24-txt_mobi">....<br><br><br>ในที่สุดฝนก็หยุดตกสักที<br><br><br>"แฮ่กๆ"<br>"เหนื่อยโว้ย"<br>"เอาหน่า ถือว่าออกกำลังกาย"</div>
-        </div>
-      </section>
-      <section>
-        <div id="page25_mobi" class="page page25_mobi">
           <div id="sm-page25-txt_mobi" class="sm-page25-img_mobi sm-page25-txt_mobi">"เหรียญก็มีสองด้าน มีคนดี ก็ต้องมีคนไม่ดี<br>ไม่แปลกหรอกที่พวกเขาจะรังเกียจเรา<br>เพราะความไม่มีนี่แหละ ทำให้เราต้องดิ้นรน"<br><br><br>"บ้างก็ลักขโมย บ้างก็เก็บขวดขาย<br>บ้างก็ใช้ร่างกาย เหมือนเป็นหมาล่าเนื้อ<br>อยู่รอดไปวัน ๆ"<br><br><br>- พี่เชอร์รี่ -</div>
         </div>
       </section>
       <section>
-        <div id="page26_mobi" class="page page26_mobi">
+        <div id="page26_mobi" class="page page26_mobi" onclick="myMove19_mobi()">
           <div id="sm-page26_mobi" class="sm-page26_mobi">
             <div id="sm-page26-img1_mobi" class="sm-page26-img_mobi sm-page26-img1_mobi"><img class="page26-img_mobi page26-img1-1_mobi"src="Frame_27/Homeless_32_phone.png">
               <img class="page26-img_mobi page26-img6-1_mobi"src="Frame_27/Text_16_phone.png">
@@ -2792,15 +2420,7 @@
             <div id="sm-page26-img4_mobi" class="sm-page26-img_mobi sm-page26-img4_mobi"><img class="page26-img_mobi page26-img4-1_mobi"src="Frame_27/Text_18_phone.png"></div>
             <div id="sm-page26-img5_mobi" class="sm-page26-img_mobi sm-page26-img5_mobi"><img class="page26-img_mobi page26-img5-1_mobi"src="Frame_27/Homeless_34_phone.png"></div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div id="page27_mobi" class="page page27_mobi">
           <div id="sm-page27-img1_mobi" class="sm-page27-img_mobi sm-page27-img1_mobi"><img class="page27-img_mobi page27-img1-1_mobi"src="Frame_28/Homeless_35_phone.png"></div>
-        </div>
-      </section>
-      <section>
-        <div id="page28_mobi" class="page page28_mobi">
           <div id="sm-page28_mobi" class="sm-page28_mobi">
             <div id="sm-page28-img1_mobi" class="sm-page28-img_mobi sm-page28-img1_mobi"><img class="page28-img_mobi page28-img1-1_mobi"src="Frame_29/Homeless_36_phone.png"></div>
             <div id="sm-page28-img2_mobi" class="sm-page28-img_mobi sm-page28-img2_mobi">ท้ายที่สุดแล้วชีวิตก็ต้องดำเนินต่อไป<br>พวกคุณคงรู้แล้วว่าเราต้องผ่านอะไรกันมาบ้าง<br><br>หลายคนมักจะถามผมเสมอว่า<br>
@@ -2820,15 +2440,11 @@
               ถ้าเจอกันข้างนอกก็แวะทักทายพูดคุยกันได้<br>
               ส่วนใครถ้าอยากช่วยเหลือพวกเรา ก็สามารถติดต่อไปยังช่องทางนี้ได้เลยครับ<br></div>
             </div>
-        </div>
-      </section>
-      <section>
-        <div id="page29_mobi" class="page page29_mobi">
-          <div id="sm-page29_mobi" class="sm-page29_mobi">
-            <div id="sm-page29-img1_mobi" class="sm-page29-img_mobi sm-page29-img1_mobi"><img class="page29-img_mobi page29-img1_mobi"src="Frame_30/Homeless_37_phone.png"></div>
-            <div id="sm-page29-img2_mobi" class="sm-page29-img_mobi sm-page29-img2_mobi">ช่องทางการติดต่อ<br>สายด่วน: 1800<br>ศูนย์คนไร้บ้าน โทร 083-932-8389<br>Email: Homelessknow@gmail.com</div>
-            <div id="sm-page29-img3_mobi" class="sm-page29-img_mobi sm-page29-img3_mobi"><img class="page29-img_mobi page29-img3_mobi"src="Frame_30/ย้อนกลับ_phone.png"></div>
-          </div>
+            <div id="sm-page29_mobi" class="sm-page29_mobi">
+              <div id="sm-page29-img1_mobi" class="sm-page29-img_mobi sm-page29-img1_mobi"><img class="page29-img_mobi page29-img1_mobi"src="Frame_30/Homeless_37_phone.png"></div>
+              <div id="sm-page29-img2_mobi" class="sm-page29-img_mobi sm-page29-img2_mobi">ช่องทางการติดต่อ<br>สายด่วน: 1800<br>ศูนย์คนไร้บ้าน โทร 083-932-8389<br>Email: Homelessknow@gmail.com</div>
+              <div id="sm-page29-img3_mobi" class="sm-page29-img_mobi sm-page29-img3_mobi"><img class="page29-img_mobi page29-img3_mobi"src="Frame_30/ย้อนกลับ_phone.png" onclick="window.location.reload();"></div>
+            </div>
         </div>
       </section>
     </div>
@@ -2836,15 +2452,561 @@
       function myMove1(){
         document.getElementById("container").style.transform = "translateX(-100vw)";
       }
+      var move2 = 0;
       function myMove2(){
-        document.getElementById("container").style.transform = "translateX(-200vw)";
+        if(move2 == 0){
+          document.getElementById("sm-page2-img2").style.opacity = "1"
+          move2 += 1;
+        }
+        else if(move2 == 1){
+          document.getElementById("sm-page2-img3").style.opacity = "1"
+          move2 += 1;
+        }
+        else if(move2 == 2){
+          document.getElementById("sm-page2-img4").style.opacity = "1"
+          move2 += 1;
+        }
+        else if(move2 == 3){
+          document.getElementById("sm-page2").style.display = "none";
+          document.getElementById("sm-page3").style.display = "grid";
+          move2 += 1;
+        }
+        else if(move2 == 4){
+          document.getElementById("sm-page3-img5").style.opacity = "1"
+          move2 += 1;
+        }
+        else if(move2 == 5){
+          document.getElementById("sm-page3-img3").style.opacity = "1"
+          document.getElementById("sm-page3-img4").style.opacity = "1"
+          move2 += 1;
+        }
+      }
+      function myMove3(){
+        if(move2 == 6){
+          document.getElementById("container").style.transform = "translateX(-200vw)";
+        }
+      }
+      function myMove4(){
+        document.getElementById("container").style.transform = "translateX(-300vw)";
+      }
+      function myMove5(){
+        document.getElementById("sm-page5").style.display = "none";
+        document.getElementById("sm-page6").style.display = "grid";
+      }
+      var move5_1 = 0;
+      var move5_2 = 0;
+      var move5_3 = 0;
+      function myMove5_1(){
+        if(move5_1 == 0){
+          document.getElementById("sm-page6").style.display = "none";
+          document.getElementById("sm-page7_3").style.display = "grid";
+          move5_1 += 1;
+        }
+        if(move5_1 == 1 && move5_2 == 1 && move5_3 == 1){
+          document.getElementById("sm-page6-img2").style.opacity = "1";
+        }
+      }
+      function myMove5_2(){
+        if(move5_2 == 0){
+          document.getElementById("sm-page6").style.display = "none";
+          document.getElementById("sm-page7_2").style.display = "grid";
+          move5_2 += 1;
+        }
+        if(move5_1 == 1 && move5_2 == 1 && move5_3 == 1){
+          document.getElementById("sm-page6-img2").style.opacity = "1";
+        }
+      }
+      function myMove5_3(){
+        if(move5_3 == 0){
+          document.getElementById("sm-page6").style.display = "none";
+          document.getElementById("sm-page7_1").style.display = "grid";
+          move5_3 += 1;
+        }
+        if(move5_1 == 1 && move5_2 == 1 && move5_3 == 1){
+          document.getElementById("sm-page6-img2").style.opacity = "1";
+        }
+      }
+      function myMove6(){
+        document.getElementById("sm-page6").style.display = "grid";
+        document.getElementById("sm-page7_1").style.display = "none";
+        document.getElementById("sm-page7_2").style.display = "none";
+        document.getElementById("sm-page7_3").style.display = "none";
+      }
+      function myMove7(){
+        document.getElementById("container").style.transform = "translateX(-400vw)";
+      }
+      var move8 = 0;
+      function myMove8(){
+        if(move8 == 0){
+          document.getElementById("sm-page8-img2").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 1){
+          document.getElementById("sm-page8-img3").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 2){
+          document.getElementById("sm-page8").style.display = "none";
+          document.getElementById("sm-page9").style.display = "grid";
+          move8 += 1;
+        }
+        else if(move8 == 3){
+          document.getElementById("sm-page9-img3").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 4){
+          document.getElementById("sm-page9-img5").style.opacity = "1"
+          document.getElementById("sm-page9-img6").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 5){
+          document.getElementById("sm-page9").style.display = "none";
+          document.getElementById("sm-page10").style.display = "grid";
+          move8 += 1;
+        }
+        else if(move8 == 6){
+          document.getElementById("sm-page10-img2").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 7){
+          document.getElementById("sm-page10-img3").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 8){
+          document.getElementById("sm-page10-img4").style.opacity = "1"
+          document.getElementById("sm-page10-img5").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 9){
+          document.getElementById("sm-page10").style.display = "none";
+          document.getElementById("sm-page11").style.display = "grid";
+          move8 += 1;
+        }
+        else if(move8 == 10){
+          document.getElementById("sm-page11-img2").style.opacity = "1"
+          move8 += 1;
+        }
+        else if(move8 == 11){
+          document.getElementById("container").style.transform = "translateX(-500vw)";
+          move8 += 1;
+        }
+      }
+      function myMove9(){
+        document.getElementById("container").style.transform = "translateX(-600vw)";
+      }
+      function myMove10(){
+        document.getElementById("container").style.transform = "translateX(-700vw)";
+      }
+      var move11 = 0;
+      function myMove11(){
+        if(move11 == 0){
+          document.getElementById("sm-page14-img2").style.opacity = "1"
+          move11 += 1;
+        }
+        else if(move11 == 1){
+          document.getElementById("sm-page14-img3").style.opacity = "1"
+          move11 += 1;
+        }
+        else if(move11 == 2){
+          document.getElementById("sm-page14").style.display = "none";
+          document.getElementById("sm-page15").style.display = "grid";
+          move11 += 1;
+        }
+      }
+      var move15_1 = 0;
+      var move15_2 = 0;
+      var move15_3 = 0;
+      function myMove15_1(){
+        if(move15_1 == 0){
+          document.getElementById("sm-page15").style.display = "none";
+          document.getElementById("sm-page16-3").style.display = "grid";
+          move15_1 += 1;
+        }
+        if(move15_1 == 1 && move15_2 == 1 && move15_3 == 1){
+          document.getElementById("sm-page15-img4").style.opacity = "1";
+        }
+      }
+      function myMove15_2(){
+        if(move15_2 == 0){
+          document.getElementById("sm-page15").style.display = "none";
+          document.getElementById("sm-page16-2").style.display = "grid";
+          move15_2 += 1;
+        }
+        if(move15_1 == 1 && move15_2 == 1 && move15_3 == 1){
+          document.getElementById("sm-page15-img4").style.opacity = "1";
+        }
+      }
+      function myMove15_3(){
+        if(move15_3 == 0){
+          document.getElementById("sm-page15").style.display = "none";
+          document.getElementById("sm-page16-1").style.display = "grid";
+          move15_3 += 1;
+        }
+        if(move15_1 == 1 && move15_2 == 1 && move15_3 == 1){
+          document.getElementById("sm-page15-img4").style.opacity = "1";
+        }
+      }
+      function myMove16(){
+        document.getElementById("sm-page15").style.display = "grid";
+        document.getElementById("sm-page16-1").style.display = "none";
+        document.getElementById("sm-page16-2").style.display = "none";
+        document.getElementById("sm-page16-3").style.display = "none";
+      }
+      function myMove17(){
+        document.getElementById("container").style.transform = "translateX(-800vw)";
+      }
+      var move18 = 0;
+      function myMove18(){
+        if(move18 == 0){
+          document.getElementById("sm-page18").style.display = "grid";
+          move18 += 1;
+        }
+        else if(move18 == 1){
+          document.getElementById("sm-page18").style.display = "none";
+          document.getElementById("sm-page19").style.display = "grid";
+          move18 += 1;
+        }
+        else if(move18 == 2){
+          document.getElementById("sm-page19").style.display = "none";
+          document.getElementById("sm-page20").style.display = "grid";
+          move18 += 1;
+        }
+        else if(move18 == 3){
+          document.getElementById("sm-page20").style.display = "none";
+          document.getElementById("sm-page21").style.display = "grid";
+          move18 += 1;
+        }
+        else if(move18 == 4){
+          document.getElementById("sm-page21").style.display = "none";
+          document.getElementById("sm-page22").style.display = "grid";
+          move18 += 1;
+        }
+        else if(move18 == 5){
+          document.getElementById("sm-page22").style.display = "none";
+          document.getElementById("sm-page23").style.display = "grid";
+          move18 += 1;
+        }
+        else if(move18 == 6){
+          document.getElementById("sm-page23").style.display = "none";
+          document.getElementById("sm-page24-txt").style.display = "block";
+          move18 += 1;
+        }
+        else if(move18 == 7){
+          document.getElementById("sm-page24-txt").style.display = "none";
+          document.getElementById("sm-page25-txt").style.display = "block";
+          move18 += 1;
+        }
+        else if(move18 == 8){
+          document.getElementById("container").style.transform = "translateX(-900vw)";
+        }
+      }
+      var move19 = 0;
+      function myMove19(){
+        if(move19 == 0){
+          document.getElementById("sm-page26-img2").style.opacity = "1"
+          move19 += 1;
+        }
+        else if(move19 == 1){
+          document.getElementById("sm-page26-img3").style.opacity = "1"
+          move19 += 1;
+        }
+        else if(move19 == 2){
+          document.getElementById("sm-page26").style.display = "none";
+          document.getElementById("sm-page27-img1").style.display = "block";
+          move19 += 1;
+        }
+        else if(move19 == 3){
+          document.getElementById("sm-page27-img1").style.display = "none";
+          document.getElementById("sm-page28").style.display = "grid";
+          move19 += 1;
+        }
+        else if(move19 == 4){
+          document.getElementById("sm-page28").style.display = "none";
+          document.getElementById("sm-page29").style.display = "grid";
+          move19 += 1;
+        }
       }
       /*mobile*/
       function myMove1_mobi(){
         document.getElementById("container_mobi").style.transform = "translateX(-100vw)";
       }
+      var move2_mobi = 0;
       function myMove2_mobi(){
-        document.getElementById("container_mobi").style.transform = "translateX(-200vw)";
+        if(move2_mobi == 0){
+          document.getElementById("sm-page2-img3_mobi").style.opacity = "1"
+          move2_mobi += 1;
+        }
+        else if(move2_mobi == 1){
+          document.getElementById("sm-page2-img2_mobi").style.opacity = "1"
+          move2_mobi += 1;
+        }
+        else if(move2_mobi == 2){
+          document.getElementById("sm-page2-img4_mobi").style.opacity = "1"
+          move2_mobi += 1;
+        }
+        else if(move2_mobi == 3){
+          document.getElementById("sm-page2_mobi").style.display = "none";
+          document.getElementById("sm-page3_mobi").style.display = "grid";
+          move2_mobi += 1;
+        }
+        else if(move2_mobi == 4){
+          document.getElementById("sm-page3-img3_mobi").style.opacity = "1"
+          move2_mobi += 1;
+        }
+        else if(move2_mobi == 5){
+          document.getElementById("sm-page3-img5_mobi").style.opacity = "1"
+          document.getElementById("sm-page3-img4_mobi").style.opacity = "1"
+          move2_mobi += 1;
+        }
+      }
+      function myMove3_mobi(){
+        if(move2_mobi == 6){
+          document.getElementById("container_mobi").style.transform = "translateX(-200vw)";
+        }
+      }
+      function myMove4_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-300vw)";
+      }
+      function myMove5_mobi(){
+        document.getElementById("sm-page5_mobi").style.display = "none";
+        document.getElementById("sm-page6_mobi").style.display = "grid";
+      }
+      var move5_1_mobi = 0;
+      var move5_2_mobi = 0;
+      var move5_3_mobi = 0;
+      function myMove5_1_mobi(){
+        if(move5_1_mobi == 0){
+          document.getElementById("sm-page6_mobi").style.display = "none";
+          document.getElementById("sm-page7_3_mobi").style.display = "grid";
+          move5_1_mobi += 1;
+        }
+        if(move5_1_mobi == 1 && move5_2_mobi == 1 && move5_3_mobi == 1){
+          document.getElementById("sm-page6-img2_mobi").style.opacity = "1";
+        }
+      }
+      function myMove5_2_mobi(){
+        if(move5_2_mobi == 0){
+          document.getElementById("sm-page6_mobi").style.display = "none";
+          document.getElementById("sm-page7_2_mobi").style.display = "grid";
+          move5_2_mobi += 1;
+        }
+        if(move5_1_mobi == 1 && move5_2_mobi == 1 && move5_3_mobi == 1){
+          document.getElementById("sm-page6-img2_mobi").style.opacity = "1";
+        }
+      }
+      function myMove5_3_mobi(){
+        if(move5_3_mobi == 0){
+          document.getElementById("sm-page6_mobi").style.display = "none";
+          document.getElementById("sm-page7_1_mobi").style.display = "grid";
+          move5_3_mobi += 1;
+        }
+        if(move5_1_mobi == 1 && move5_2_mobi == 1 && move5_3_mobi == 1){
+          document.getElementById("sm-page6-img2_mobi").style.opacity = "1";
+        }
+      }
+      function myMove6_mobi(){
+        document.getElementById("sm-page6_mobi").style.display = "grid";
+        document.getElementById("sm-page7_1_mobi").style.display = "none";
+        document.getElementById("sm-page7_2_mobi").style.display = "none";
+        document.getElementById("sm-page7_3_mobi").style.display = "none";
+      }
+      function myMove7_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-400vw)";
+      }
+      var move8_mobi = 0;
+      function myMove8_mobi(){
+        if(move8_mobi == 0){
+          document.getElementById("sm-page8-img2_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 1){
+          document.getElementById("sm-page8-img3_mobi").style.opacity = "1"
+          document.getElementById("sm-page8-img4_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 2){
+          document.getElementById("sm-page8_mobi").style.display = "none";
+          document.getElementById("sm-page9_mobi").style.display = "grid";
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 3){
+          document.getElementById("sm-page9-img2_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 4){
+          document.getElementById("sm-page9-img3_mobi").style.opacity = "1"
+          document.getElementById("sm-page9-img4_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 5){
+          document.getElementById("sm-page9_mobi").style.display = "none";
+          document.getElementById("sm-page10_mobi").style.display = "grid";
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 6){
+          document.getElementById("sm-page10-img2_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 7){
+          document.getElementById("sm-page10-img3_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 8){
+          document.getElementById("sm-page10-img4_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 9){
+          document.getElementById("sm-page10_mobi").style.display = "none";
+          document.getElementById("sm-page11_mobi").style.display = "grid";
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 10){
+          document.getElementById("sm-page11-img2_mobi").style.opacity = "1"
+          document.getElementById("sm-page11-img3_mobi").style.opacity = "1"
+          move8_mobi += 1;
+        }
+        else if(move8_mobi == 11){
+          document.getElementById("container_mobi").style.transform = "translateX(-500vw)";
+          move8_mobi += 1;
+        }
+      }
+      function myMove9_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-600vw)";
+      }
+      function myMove10_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-700vw)";
+      }
+      var move11_mobi = 0;
+      function myMove11_mobi(){
+        if(move11_mobi == 0){
+          document.getElementById("sm-page14-img2_mobi").style.opacity = "1"
+          move11_mobi += 1;
+        }
+        else if(move11_mobi == 1){
+          document.getElementById("sm-page14-img3_mobi").style.opacity = "1"
+          document.getElementById("sm-page14-img4_mobi").style.opacity = "1"
+          move11_mobi += 1;
+        }
+        else if(move11_mobi == 2){
+          document.getElementById("sm-page14_mobi").style.display = "none";
+          document.getElementById("sm-page15_mobi").style.display = "grid";
+          move11_mobi += 1;
+        }
+      }
+      var move15_1_mobi = 0;
+      var move15_2_mobi = 0;
+      var move15_3_mobi = 0;
+      function myMove15_1_mobi(){
+        if(move15_1_mobi == 0){
+          document.getElementById("sm-page15_mobi").style.display = "none";
+          document.getElementById("sm-page16_3_mobi").style.display = "grid";
+          move15_1_mobi += 1;
+        }
+        if(move15_1_mobi == 1 && move15_2_mobi == 1 && move15_3_mobi == 1){
+          document.getElementById("sm-page15-img4_mobi").style.opacity = "1";
+        }
+      }
+      function myMove15_2_mobi(){
+        if(move15_2_mobi == 0){
+          document.getElementById("sm-page15_mobi").style.display = "none";
+          document.getElementById("sm-page16_2_mobi").style.display = "grid";
+          move15_2_mobi += 1;
+        }
+        if(move15_1_mobi == 1 && move15_2_mobi == 1 && move15_3_mobi == 1){
+          document.getElementById("sm-page15-img4_mobi").style.opacity = "1";
+        }
+      }
+      function myMove15_3_mobi(){
+        if(move15_3_mobi == 0){
+          document.getElementById("sm-page15_mobi").style.display = "none";
+          document.getElementById("sm-page16_1_mobi").style.display = "grid";
+          move15_3_mobi += 1;
+        }
+        if(move15_1_mobi == 1 && move15_2_mobi == 1 && move15_3_mobi == 1){
+          document.getElementById("sm-page15-img4_mobi").style.opacity = "1";
+        }
+      }
+      function myMove16_mobi(){
+        document.getElementById("sm-page15_mobi").style.display = "grid";
+        document.getElementById("sm-page16_1_mobi").style.display = "none";
+        document.getElementById("sm-page16_2_mobi").style.display = "none";
+        document.getElementById("sm-page16_3_mobi").style.display = "none";
+      }
+      function myMove17_mobi(){
+        document.getElementById("container_mobi").style.transform = "translateX(-800vw)";
+      }
+      var move18_mobi = 0;
+      function myMove18_mobi(){
+        if(move18_mobi == 0){
+          document.getElementById("sm-page18_mobi").style.display = "grid";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 1){
+          document.getElementById("sm-page18_mobi").style.display = "none";
+          document.getElementById("sm-page19_mobi").style.display = "grid";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 2){
+          document.getElementById("sm-page19_mobi").style.display = "none";
+          document.getElementById("sm-page20_mobi").style.display = "grid";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 3){
+          document.getElementById("sm-page20_mobi").style.display = "none";
+          document.getElementById("sm-page21_mobi").style.display = "grid";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 4){
+          document.getElementById("sm-page21_mobi").style.display = "none";
+          document.getElementById("sm-page22_mobi").style.display = "grid";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 5){
+          document.getElementById("sm-page22_mobi").style.display = "none";
+          document.getElementById("sm-page23_mobi").style.display = "grid";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 6){
+          document.getElementById("sm-page23_mobi").style.display = "none";
+          document.getElementById("sm-page24-txt_mobi").style.display = "block";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 7){
+          document.getElementById("sm-page24-txt_mobi").style.display = "none";
+          document.getElementById("sm-page25-txt_mobi").style.display = "block";
+          move18_mobi += 1;
+        }
+        else if(move18_mobi == 8){
+          document.getElementById("container_mobi").style.transform = "translateX(-900vw)";
+        }
+      }
+      var move19_mobi = 0;
+      function myMove19_mobi(){
+        if(move19_mobi == 0){
+          document.getElementById("sm-page26-img2_mobi").style.opacity = "1"
+          document.getElementById("sm-page26-img3_mobi").style.opacity = "1"
+          move19_mobi += 1;
+        }
+        else if(move19_mobi == 1){
+          document.getElementById("sm-page26-img4_mobi").style.opacity = "1"
+          document.getElementById("sm-page26-img5_mobi").style.opacity = "1"
+          move19_mobi += 1;
+        }
+        else if(move19_mobi == 2){
+          document.getElementById("sm-page26_mobi").style.display = "none";
+          document.getElementById("sm-page27-img1_mobi").style.display = "block";
+          move19_mobi += 1;
+        }
+        else if(move19_mobi == 3){
+          document.getElementById("sm-page27-img1_mobi").style.display = "none";
+          document.getElementById("sm-page28_mobi").style.display = "grid";
+          move19_mobi += 1;
+        }
+        else if(move19_mobi == 4){
+          document.getElementById("sm-page28_mobi").style.display = "none";
+          document.getElementById("sm-page29_mobi").style.display = "grid";
+          move19_mobi += 1;
+        }
       }
     </script>
   </body>
