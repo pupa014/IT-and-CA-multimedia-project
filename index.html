@@ -813,7 +813,7 @@
         grid-column:1/3;
       }
       .page21-img1-1{
-        max-width:50vw;
+        max-width:35vw;
         height:auto;
       }
       .sm-page22{
@@ -829,13 +829,13 @@
         justify-content:center;
       }
       .sm-page22-img1{
-        background-position: center;
+        background-position:center;
         background-size:80%;
         background-repeat:no-repeat;
         grid-row:3/6;
       }
       .sm-page22-txt{
-        text-align: center;
+        text-align:center;
         font-size:1.5vw;
         grid-row:1/3;
       }
@@ -1998,6 +1998,10 @@
           position:relative;
           left:30%;
         }
+        #icon1, #icon2, #icon3, #icon4, #icon5, #icon6{
+          width: 80px;
+          cursor: pointer;
+        }
     </style>
   </head>
   <body>
@@ -2141,32 +2145,179 @@
         </div>
       </section>
       <section>
-        <div id="page17" class="page page17" onclick="myMove18()">
-          <div id="sm-page18" class="sm-page18">
-            <div id="sm-page18-img1" class="sm-page18-img sm-page18-img1"><img class="page18-img page18-img1-1"src="Frame_18-26/HOMELESS_25.GIF"></div>
+        <div id="page17" class="page page17">
+          <div><img src="Frame_7/ไปต่อ.png"onclick="myMove18()"></div>
+            <div id="sm-page18" class="sm-page18">          
+            <div id="sm-page18-img1" class="sm-page18-img sm-page18-img1"><img class="page18-img page18-img1-1"src="Frame_18-26/HOMELESS_25.GIF">
+              </div>
+              <div class="right-col">
+                <p>กดเพื่อเล่นเสียง</p>
+                <img src = "play.png" id = "icon1" onclick="playsound1()">
+              </div>
+              
+              <audio id = "mySound1">
+                <source src="storm.mp3" type="audio/mp3">
+              </audio>
+              
+              <script>
+                var mySound1 = document.getElementById("mySound1");
+                var icon = document.getElementById("icon1");
+              
+                icon1.onclick = function playsound1(){
+                  if(mySound1.paused){
+                    mySound1.play();
+                    icon1.src = "pause.png";
+                  }else{
+                    mySound1.pause();
+                    icon1.src = "play.png";
+                  }
+                }
+              </script>
             <div id="sm-page18-txt" class="sm-page18-img sm-page18-txt">"ฝนตกแล้วน้า ทำไงดี"<br>- พี่ชาติ -</div>
-            <div id="sm-page18-img2" class="sm-page18-img sm-page18-img2"><img class="page18-img page18-img2-1"src="Frame_18-26/HOMELESS_25.GIF"></div>
+            <div id="sm-page18-img2" class="sm-page18-img sm-page18-img2"><img class="page18-img page18-img2-1"src="Frame_18-26/HOMELESS_25.GIF">
+              
+            </div>
           </div>
           <div id="sm-page19" class="sm-page19">
             <div id="sm-page19-img1" class="sm-page19-img sm-page19-img1"><img class="page19-img page19-img1-1"src="Frame_18-26/HOMELESS_26.GIF"></div>
+
+            <div class="right-col">
+              <p>กดเพื่อเล่นเสียง</p>
+              <img src = "play.png" id = "icon2">
+            </div>
+            
+            <audio id = "mySound2">
+              <source src="walk.mp3" type="audio/mp3">
+            </audio>
+            
+            <script>
+              var mySound2 = document.getElementById("mySound2");
+              var icon = document.getElementById("icon2");
+            
+              icon2.onclick = function(){
+                if(mySound2.paused){
+                  mySound2.play();
+                  icon2.src = "pause.png";
+                }else{
+                  mySound2.pause();
+                  icon2.src = "play.png";
+                }
+              }
+            </script>
+            
             <div id="sm-page19-txt" class="sm-page19-img sm-page19-txt">"วิ่งดิ!! รอไร"<br>- น้าเขียว -</div>
           </div>
           <div id="sm-page20" class="sm-page20">
             <div id="sm-page20-txt" class="sm-page20-img sm-page20-txt">"เทศกิจมาแล้วพี่ รีบเลย"<br>- พี่เชอร์รี่ -</div>
             <div id="sm-page20-img1" class="sm-page20-img sm-page20-img1"><img class="page20-img page20-img1-1"src="Frame_18-26/HOMELESS_27.GIF"></div>
+            <div class="right-col">
+              <p>กดเพื่อเล่นเสียง</p>
+              <img src = "play.png" id = "icon3">
+              </div>
+              
+              <audio id = "mySound3">
+              <source src="whistle.mp3" type="audio/mp3">
+              </audio>
+              
+              <script>
+              var mySound3 = document.getElementById("mySound3");
+              var icon = document.getElementById("icon3");
+              
+              icon3.onclick = function(){
+              if(mySound3.paused){
+                mySound3.play();
+                icon3.src = "pause.png";
+              }else{
+                mySound3.pause();
+                icon3.src = "play.png";
+              }
+              }
+              </script>
           </div>
           <div id="sm-page21" class="sm-page21">
             <div id="sm-page21-txt" class="sm-page21-img sm-page21-txt">"โคตรสกปรกเลยว่ะ มาอยู่ได้ทุกวัน"<br>- ชาวบ้าน 1 -</div>
-            <div id="sm-page21-img1" class="sm-page21-img sm-page21-img1"><img class="page21-img page21-img1-1"src="Frame_18-26/HOMELESS_28.GIF"></div>
+            <div id="sm-page21-img1" class="sm-page21-img sm-page21-img1"><img class="page21-img page21-img1-1"src="Frame_18-26/HOMELESS_28.GIF">
+            </div>
+            <div class="right-col">
+              <p>กดเพื่อเล่นเสียง</p>
+              <img src = "play.png" id = "icon4">
+              </div>
+              
+              <audio id = "mySound4">
+              <source src="crowd.mp3" type="audio/mp3">
+              </audio>
+              
+              <script>
+              var mySound4 = document.getElementById("mySound4");
+              var icon = document.getElementById("icon4");
+              
+              icon4.onclick = function(){
+              if(mySound4.paused){
+                mySound4.play();
+                icon4.src = "pause.png";
+              }else{
+                mySound4.pause();
+                icon4.src = "play.png";
+              }
+              }
+              </script>
           </div>
           <div id="sm-page22" class="sm-page22">
             <div id="sm-page22-txt" class="sm-page22-img sm-page22-txt">"เหม็น! ออกจากร้านไปเลยนะ"<br>- ชาวบ้าน 2 -</div>
             <div id="sm-page22-img1" class="sm-page22-img sm-page22-img1"><img class="page22-img page21-img1-1"src="Frame_18-26/HOMELESS_29.GIF"></div>
+            <div class="right-col">
+              <p>กดเพื่อเล่นเสียง</p>
+              <img src = "play.png" id = "icon5">
+              </div>
+              
+              <audio id = "mySound5">
+              <source src="throw.mp3" type="audio/mp3">
+              </audio>
+              
+              <script>
+              var mySound5 = document.getElementById("mySound5");
+              var icon = document.getElementById("icon5");
+              
+              icon5.onclick = function(){
+              if(mySound5.paused){
+                mySound5.play();
+                icon5.src = "pause.png";
+              }else{
+                mySound5.pause();
+                icon5.src = "play.png";
+              }
+              }
+              </script>
           </div>
           <div id="sm-page23" class="sm-page23">
             <div id="sm-page23-img1" class="sm-page23-img sm-page23-img1"><img class="page23-img page23-img1-1"src="Frame_18-26/HOMELESS_30.GIF"></div>
             <div id="sm-page23-txt" class="sm-page23-img sm-page23-txt">"ยังไม่อาบน้ำก็สาดใส่เลย ฮ่าๆ"<br>- ชาวบ้าน 3 -</div>
-            <div id="sm-page23-img2" class="sm-page23-img sm-page23-img2"><img class="page23-img page23-img2-1"src="Frame_18-26/HOMELESS_31.GIF"></div>
+            <div id="sm-page23-img2" class="sm-page23-img sm-page23-img2"><img class="page23-img page23-img2-1"src="Frame_18-26/HOMELESS_31.GIF">
+              </div>
+              <div class="right-col">
+                <p>กดเพื่อเล่นเสียง</p>
+                <img src = "play.png" id = "icon6">
+                </div>
+                
+                <audio id = "mySound6">
+                <source src="splash.mp3" type="audio/mp3">
+                </audio>
+                
+                <script>
+                var mySound6 = document.getElementById("mySound6");
+                var icon = document.getElementById("icon6");
+                
+                icon6.onclick = function(){
+                if(mySound6.paused){
+                  mySound6.play();
+                  icon6.src = "pause.png";
+                }else{
+                  mySound6.pause();
+                  icon6.src = "play.png";
+                }
+                }
+                </script>
+            <div><img src="Frame_7/ไปต่อ.png"onclick="myMove18()"></div>
           </div>
           <div id="sm-page24-txt" class="sm-page24-img sm-page24-txt">....<br><br><br>ในที่สุดฝนก็หยุดตกสักที<br><br><br>"แฮ่กๆ"<br>"เหนื่อยโว้ย"<br>"เอาหน่า ถือว่าออกกำลังกาย"</div>
           <div id="sm-page25-txt" class="sm-page25-img sm-page25-txt">"เหรียญก็มีสองด้าน มีคนดี ก็ต้องมีคนไม่ดี<br>ไม่แปลกหรอกที่พวกเขาจะรังเกียจเรา<br>เพราะความไม่มีนี่แหละ ทำให้เราต้องดิ้นรน"<br><br><br>"บ้างก็ลักขโมย บ้างก็เก็บขวดขาย<br>บ้างก็ใช้ร่างกาย เหมือนเป็นหมาล่าเนื้อ<br>อยู่รอดไปวัน ๆ"<br><br><br>- พี่เชอร์รี่ -</div>
